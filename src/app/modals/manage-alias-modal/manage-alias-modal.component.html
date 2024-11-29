@@ -1,0 +1,10 @@
+<app-modal header="Alias" [(visible)]="visible" (visibleChange)="visibleChange.emit($event)">
+  <div class="content-modal-container">
+    <span class="p-text-secondary block mb-5">Alias modal working</span>
+
+    <div class="flex align-items-center justify-content-center gap-2">
+      <p-button label="Cancelar" (onClick)="onCancel()" [outlined]="true"></p-button>
+      <p-button label="Aplicar" (onClick)="onCancel()"></p-button>
+    </div>
+  </div>
+</app-modal>

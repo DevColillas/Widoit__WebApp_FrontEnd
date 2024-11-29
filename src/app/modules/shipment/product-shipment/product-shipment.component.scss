@@ -1,0 +1,77 @@
+// /* Firefox */
+// * {
+//   scrollbar-width: thin; /* Makes scrollbar thinner */
+//   scrollbar-color: var(--primary-color) var(--gray-100); /* Thumb and track colors */
+// }
+
+.shipment-products-form-body{
+  max-height: calc(100vh - 580px);
+}
+
+.dropdown-content{
+  gap: 1px;
+
+  p-dropdown{
+    ::ng-deep .p-dropdown{
+      width: 100%;
+    }
+  }
+}
+
+.formgrid-row {
+  margin-right: 10px
+}
+.products-form-teaxtarea {
+  height: 90% !important;
+  overflow-y: auto;
+  resize: none;
+}
+
+.form-delete-btn {
+  width: 100% !important
+}
+
+@media screen and (min-width: 992px) {
+  .form-delete-btn {
+    width: 60px !important
+  }
+}
+
+::ng-deep .p-inputnumber-buttons-horizontal {
+  border: 1px solid var(--gray-300);
+  border-radius: 6px;
+}
+
+::ng-deep .p-inputnumber-buttons-horizontal:hover {
+  border: 1px solid var(--gray-300);
+  border-color: var(--primary-color);
+}
+::ng-deep .p-inputnumber-buttons-horizontal:focus-within {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: var(--focus-ring);
+  border-color: var(--primary-color);
+}
+
+::ng-deep .p-inputnumber-buttons-horizontal.p-inputnumber {
+  .p-inputnumber-input {
+    border-width: 0px;
+    text-align: center;
+  }
+  .p-inputnumber-button {
+    background-color: inherit;
+    border-width: 0px;
+    color: var(--gray-500);
+    width: 2rem;
+  }
+  .p-inputnumber-button-down {
+    justify-content: end;
+  }
+  .p-inputnumber-button-up {
+    justify-content: start;
+  }
+  .p-inputtext:enabled:focus {
+    border-color: none;
+    box-shadow: none;
+  }
+}

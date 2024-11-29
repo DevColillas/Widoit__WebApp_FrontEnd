@@ -1,0 +1,4 @@
+<p-dialog header="{{header}}" [(visible)]="visible" [modal]="true" [draggable]="false" (onHide)="closeModal()" [closable]="false" [position]="position">
+  <span class="p-text-secondary block subtitle ">{{ subtitle }}</span>
+  <ng-content></ng-content>
+</p-dialog>

@@ -1,0 +1,11 @@
+// estilos generles de tabla
+.content-modal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+::ng-deep .content-modal-container span {
+  margin: 0px !important;
+  text-align: center !important;
+}

@@ -1,0 +1,15 @@
+<app-modal header="Configuración de la tabla"  subtitle="Selecciona los campos que desea visualizar (8 max)" [position]="'center'" [(visible)]="visible" (visibleChange)="visibleChange.emit($event)">
+  <div class="content-modal-container">
+    <div class="checkbox-container-list flex flex-column align-items-start justify-content-start">
+      <!-- aqui va la tabla de primeng con checkbox y la lista de los headers -->
+      <p-checkbox class="custom-checkbox" *ngFor="let col of tempColumns" [label]="col.header" [binary]="true" [(ngModel)]="col.isVisible"
+        [disabled]="isFileNumberColumn(col)">
+      </p-checkbox>
+    </div>
+
+    <div class="flex align-items-center justify-content-center gap-2">
+      <p-button label="Cancelar" (onClick)="onCancel()" [outlined]="true"></p-button>
+      <p-button label="Aplicar" [disabled]="selectedCount > 8" (onClick)="onApply()"></p-button>
+    </div>
+  </div>
+</app-modal>

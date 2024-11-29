@@ -1,0 +1,190 @@
+<div>
+  <form [formGroup]="productsForm">
+    <app-shipment-form-section>
+      <!-- Products Section -->
+      <div class="text-gray-600">
+        <div
+          class="shipment-products-form-body overflow-y-auto"
+          formArrayName="products"
+        >
+          @for (product of products.controls; track $index; let i = $index) {
+          <div class="formgrid grid formgrid-row" [formGroupName]="i">
+            <!-- Naturaleza -->
+            <div class="field col-12 lg:col-3 flex flex-column dropdown-content">
+              <label class="form-label font-bold" for="nature-{{ i }}">Naturaleza*</label>
+              <p-dropdown
+                id="nature-{{ i }}"
+                [options]="nature"
+                onChange="changeNatureProduct($event, i)"
+                class="w-full"
+                appendTo="body"
+                optionLabel="name"
+                placeholder="Selecciona naturaleza"
+              />
+            </div>
+
+            <!-- Nombre -->
+            <div class="field col-12 lg:col-3">
+              <label class="form-label" for="name-{{ i }}">Nombre</label>
+              <input
+                formControlName="name"
+                class="w-full"
+                id="name-{{ i }}"
+                type="text"
+                pInputText
+              />
+            </div>
+
+            <!-- Cantidad -->
+            <div class="field col-6 lg:col">
+              <label class="form-label" for="quantity-{{ i }}">Cantidad</label>
+              <div>
+                <p-inputNumber
+                  formControlName="quantity"
+                  inputStyleClass="w-full"
+                  [showButtons]="true"
+                  buttonLayout="horizontal"
+                  inputId="quantity-{{ i }}"
+                  incrementButtonIcon="pi pi-plus"
+                  decrementButtonIcon="pi pi-minus"
+                />
+              </div>
+            </div>
+
+            <!-- Volumen -->
+            <div class="field col-6 lg:col">
+              <label class="form-label" for="volume-{{ i }}"
+                >Volumen (m³)</label
+              >
+              <div>
+                <p-inputNumber
+                  formControlName="volume"
+                  inputStyleClass="w-full"
+                  [showButtons]="true"
+                  buttonLayout="horizontal"
+                  inputId="volume-{{ i }}"
+                  incrementButtonIcon="pi pi-plus"
+                  decrementButtonIcon="pi pi-minus"
+                />
+              </div>
+            </div>
+
+            <!-- Peso Unitario -->
+            <div class="field col-6 lg:col">
+              <label class="form-label" for="unitWeight-{{ i }}"
+                >Peso unitario (kg)*</label
+              >
+              <div class="w-full">
+                <p-inputNumber
+                  formControlName="unitWeight"
+                  inputStyleClass="w-full"
+                  [showButtons]="true"
+                  buttonLayout="horizontal"
+                  inputId="unitWeight-{{ i }}"
+                  incrementButtonIcon="pi pi-plus"
+                  decrementButtonIcon="pi pi-minus"
+                />
+              </div>
+            </div>
+
+            <!-- Peso Total -->
+            <div class="field col-6 lg:col">
+              <label class="form-label font-bold" for="totalWeight-{{ i }}"
+                >Peso total (kg)</label
+              >
+              <input
+                class="w-full"
+                [value]="calculateRowWeight(i)"
+                formControlName="totalWeight"
+                type="number"
+                pInputText
+                readonly
+              />
+            </div>
+
+            <!-- Remove Button -->
+            <div
+              class="field col-12 lg:col-fixed form-delete-btn flex align-items-end"
+            >
+              <!-- <label class="form-label"></label> -->
+              <button
+                type="button"
+                pButton
+                icon="pi pi-trash"
+                class="p-button-danger form-delete-btn"
+                (click)="removeProduct(i)"
+              ></button>
+            </div>
+          </div>
+          } @empty {
+          <div class="w-full text-center text-sm text-gray-400">
+            No se encontraron registros
+          </div>
+          }
+        </div>
+      </div>
+
+      <!-- Add Product Button -->
+      <div class="my-3">
+        <button
+          type="button"
+          pButton
+          label="Añadir producto"
+          class="font-bold w-full lg:max-w-max"
+          icon="pi pi-plus"
+          iconPos="right"
+          outlined="true"
+          (click)="addProduct()"
+        ></button>
+      </div>
+
+      <div class="text-gray-600">
+        <div class="">
+          <div class="formgrid grid">
+            <div class="field col-12 lg:col-10">
+              <label class="form-label" for="observations">Observaciones</label>
+              <textarea
+                class="w-full products-form-teaxtarea"
+                id="observations"
+                pInputTextarea
+                formControlName="observations"
+              ></textarea>
+            </div>
+
+            <div class="col border-1 border-gray-300 border-round-2xl p-3 m-2">
+              <div class="formgrid grid">
+                <div class="field col-12">
+                  <label class="form-label font-bold" for="totalVolume"
+                    >Volumen total (m³)</label
+                  >
+                  <input
+                    class="w-full"
+                    [value]="totalVolumeSignal()"
+                    formControlName="totalVolume"
+                    type="number"
+                    pInputText
+                    readonly
+                  />
+                </div>
+
+                <div class="field col-12">
+                  <label class="form-label font-bold" for="totalWeight"
+                    >Peso total (kg)</label
+                  >
+                  <input
+                    class="w-full"
+                    [value]="totalWeightSignal()"
+                    formControlName="totalWeight"
+                    type="number"
+                    pInputText
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </app-shipment-form-section>
+  </form>
+</div>

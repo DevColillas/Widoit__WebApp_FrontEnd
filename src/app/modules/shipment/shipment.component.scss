@@ -1,0 +1,22 @@
+.tab-menu-container {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.shipment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.button-group p-button {
+  margin-left: 10px;
+}
+.custom-tab-content{
+  max-height: calc(100vh - 280px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0px 10px;
+
+}

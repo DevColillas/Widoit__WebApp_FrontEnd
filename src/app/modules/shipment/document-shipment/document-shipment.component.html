@@ -1,0 +1,55 @@
+<div class="w-full">
+  <form [formGroup]="documentForm">
+    <div formGroupName="identifiers" class="form-content">
+      <div class="form-heading">Identificadores</div>
+      <div class="form-cols">
+        <div class="form-half">
+          <div class="flex flex-column">
+            <label class="form-label" for="file-number">Nº de expediente</label>
+            <input formControlName="fileNumber" id="file-number" type="text" pInputText
+              aria-describedby="file-number-help"/>
+            <small id="file-number-help">
+              Varios documentos pueden tener el mismo nº de expediente (Opcional)
+            </small>
+          </div>
+        </div>
+        <div class="form-half">
+          <div class="flex flex-column">
+            <label class="form-label" for="internal-marker">Marcador interno</label>
+            <input formControlName="internalMarker" id="internal-marker" type="text" pInputText
+              aria-describedby="internal-marker-help"/>
+            <small id="internal-marker-help">
+              Número identificador adicional (Opcional)
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <div class="form-section">
+      <div class="form-heading">
+        <span>Tipo de documento</span>
+      </div>
+      <div formGroupName="documentType" class="form-body grid">
+        <div class="col-12 grid toggle-content">          
+          <p-toggleButton class="first-btn" formControlName="cmrOption" onLabel="CMR" offLabel="CMR"
+            [disabled]="true"></p-toggleButton>
+          <p-toggleButton class="second-btn" formControlName="billOfLadingOption" [onLabel]="'Carta de Portes'"
+            [offLabel]="'Carta de Portes'" [disabled]="true"></p-toggleButton>          
+        </div>
+      </div>
+    </div> 
+    <div class="form-section">
+      <div class="form-heading">
+        <span>Transporte sucesivo</span>
+      </div>
+      <div formGroupName="successiveTransport" class="form-body grid">
+        <div class="col-12 grid toggle-content">
+          <p-toggleButton class="first-btn" formControlName="yesOption" onLabel="Sí" offLabel="Sí"
+            [disabled]="true"></p-toggleButton>
+          <p-toggleButton class="second-btn" formControlName="noOption" [onLabel]="'No'" [offLabel]="'No'"
+            [disabled]="true"></p-toggleButton>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

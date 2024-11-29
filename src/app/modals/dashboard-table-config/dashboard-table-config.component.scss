@@ -1,0 +1,37 @@
+// estilos generles de tabla
+.content-modal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content-modal-container span {
+  margin: 0px !important;
+  text-align: center !important;
+}
+
+.content-modal-container ::ng-deep .p-datatable .p-datatable-tbody>tr>td {
+  padding: 10px;
+}
+
+.checkbox-container-list{
+  flex: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 290px);
+  width: 100%;
+}
+
+//checkbox styles
+.checkbox-container-list ::ng-deep p-checkbox.custom-checkbox{
+  padding: 10px;
+  color: #4B5563;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.04px;
+  width: 100%;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.checkbox-container-list ::ng-deep p-checkbox.custom-checkbox:last-of-type {
+  border-bottom: none;
+}

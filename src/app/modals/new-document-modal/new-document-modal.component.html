@@ -1,0 +1,98 @@
+<app-modal header="Nuevo documento" subtitle="Configura un nuevo documento de transporte" [position]="'center'"
+  [(visible)]="visible" (visibleChange)="visibleChange.emit($event)">
+  <div class="content-modal-container">
+    <div class="form-content-container flex align-items-center gap-[40px]">
+      <form [formGroup]="newDocumentForm">
+        <div class="form-section">
+          <div class="form-heading">
+            <span>Identificadores</span>
+          </div>
+          <div formGroupName="identifiers" class="form-body grid">
+            <div class="col-12 grid">
+              <div class="col-12 md:col-6">
+                <div class="flex flex-column">
+                  <label class="form-label" for="short-doc-num">Nº de documento abreviado</label>
+                  <input formControlName="documentNumber" id="short-doc-num" type="text" pInputText
+                    aria-describedby="document-number-help" />
+                  <small id="document-number-help">
+                    Este número serà visible en la aplicación
+                  </small>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 grid">
+              <div class="col-12 md:col-6">
+                <div class="flex flex-column">
+                  <label class="form-label" for="file-number">Nº de expediente</label>
+                  <input formControlName="fileNumber" id="file-number" type="text" pInputText
+                    aria-describedby="file-number-help" />
+                  <small id="file-number-help">
+                    Varios documentos pueden tener el mismo nº de expediente (Opcional)
+                  </small>
+                </div>
+              </div>
+              <div class="col-12 md:col-6">
+                <div class="flex flex-column">
+                  <label class="form-label" for="internal-marker">Marcador interno</label>
+                  <input formControlName="internalMarker" id="internal-marker" type="text" pInputText
+                    aria-describedby="internal-marker-help" />
+                  <small id="internal-marker-help">
+                    Número identificador adicional (Opcional)
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="form-heading">
+            <span>Tipo de documento</span>
+          </div>
+          <div formGroupName="documentType" class="form-body grid">
+            <div class="col-12 grid">
+              <!-- Botón para CMR -->
+              <p-toggleButton class="first-btn" formControlName="cmrOption" onLabel="CMR" offLabel="CMR"
+                (onChange)="onDocumentToggleChange('cmrOption')" [ngClass]="{'active-toggle': newDocumentForm.get('documentType')?.value.cmrOption,
+                'inactive-toggle': !newDocumentForm.get('documentType')?.value.cmrOption}">
+              </p-toggleButton>
+
+              <!-- Botón para Carta de Portes -->
+              <p-toggleButton class="second-btn" formControlName="billOfLadingOption" [onLabel]="'Carta de Portes'"
+                [offLabel]="'Carta de Portes'" (onChange)="onDocumentToggleChange('billOfLadingOption')" [ngClass]="{'active-toggle': newDocumentForm.get('documentType')?.value.billOfLadingOption,
+                'inactive-toggle': !newDocumentForm.get('documentType')?.value.billOfLadingOption
+                }">
+              </p-toggleButton>
+
+            </div>
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="form-heading">
+            <span>Transporte succesivo</span>
+          </div>
+          <div formGroupName="successiveTransport" class="form-body grid">
+            <div class="col-12 grid">
+              <!-- Botón para CMR -->
+              <p-toggleButton class="first-btn" formControlName="yesOption" onLabel="Si" offLabel="Si"
+                (onChange)="onSuccessiveToggleChange('yesOption')" [ngClass]="{'active-toggle': newDocumentForm.get('successiveTransport')?.value.yesOption,
+                'inactive-toggle': !newDocumentForm.get('successiveTransport')?.value.noOption}">
+              </p-toggleButton>
+
+              <!-- Botón para Carta de Portes -->
+              <p-toggleButton class="second-btn" formControlName="noOption" [onLabel]="'No'" [offLabel]="'No'"
+                (onChange)="onSuccessiveToggleChange('noOption')" [ngClass]="{'active-toggle': newDocumentForm.get('successiveTransport')?.value.yesOption,
+                'inactive-toggle': !newDocumentForm.get('successiveTransport')?.value.noOption
+                }">
+              </p-toggleButton>
+
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="flex align-items-center justify-content-end gap-2">
+      <p-button label="Cancelar" (onClick)="onCancel()" [outlined]="true"></p-button>
+      <p-button label="Aplicar" [disabled]="false" (onClick)="onApply()"></p-button>
+    </div>
+  </div>
+</app-modal>

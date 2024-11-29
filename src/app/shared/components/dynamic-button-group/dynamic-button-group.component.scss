@@ -1,0 +1,9 @@
+.button-group p-button {
+  font-size: 14px;
+  font-weight: 700px;
+}
+
+.custom-button ::ng-deep .p-button-label {
+  font-weight: 700 !important;
+  height: 14px !important;
+}

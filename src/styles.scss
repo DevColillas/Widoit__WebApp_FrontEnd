@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/aura-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
+
+:root {
+  --font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background: var(--Lara-Root-surface-ground, #EFF3F8);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px !important;
+  height: 100%;
+  color: #4B5563 !important;
+}
+
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--Lara-Root-surface-ground, #EFF3F8);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--theme-primary-color, hsla(217, 91%, 60%, 0.653));
+  // background-color: hsla(217, 91%, 60%, 0.214);
+  border-radius: 3px;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  // background-color: hsla(217, 91%, 60%, 0.4);
+  background-color: var(--theme-primary-color, hsl(217, 91%, 60%));
+}
+
+::-webkit-scrollbar-track:hover + ::-webkit-scrollbar,
+::-webkit-scrollbar:hover {
+  opacity: 1;
+}
+
+// driver tab
+.form-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 10px !important;
+}
+
+.p-inputtext {
+  font-size: 14px;
+  color: #4B5563;
+}
+
+.p-inputtext:disabled {
+  opacity: 1;
+  background-color: #f3f4f6;
+  color: #4B5563;
+  font-size: 14px;
+}
+
+p-button{
+  /*display: flex !important;*/
+  height: 37px !important;
+}
+

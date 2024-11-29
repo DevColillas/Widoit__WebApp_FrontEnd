@@ -1,0 +1,147 @@
+<div class="sidebar-content">
+  <div class="scroll-content">
+    <app-collapse title="Fecha">
+      <div class="buttons-filter">
+        <div class="buttons-filter-row-single">
+          <p-button label="Expedición"
+            [rounded]="true"
+            [severity]="buttonDate.expedicion ? null : 'secondary'"
+            (click)="toggleButtonDate('expedicion')" />          
+        </div>
+        <div class="buttons-filter-row">
+          <p-button label="Carga"
+            [rounded]="true"
+            [severity]="buttonDate.carga ? null : 'secondary'"
+            (click)="toggleButtonDate('carga')" />
+          <p-button label="Descarga"
+            [rounded]="true"
+            [severity]="buttonDate.descarga ? null : 'secondary'"
+            (click)="toggleButtonDate('descarga')" />
+        </div>        
+      </div>
+      <p-calendar
+        [(ngModel)]="dateInit"
+        (ngModelChange)="actualizarFiltro('dateInit', dateInit)"
+        dateFormat="dd/mm/yy"
+        [iconDisplay]="'input'"
+        appendTo="body"
+        [showIcon]="true"
+        inputId="desde"
+        placeholder="Desde"
+        />
+      <p-calendar
+        [(ngModel)]="dateEnd"
+        (ngModelChange)="actualizarFiltro('dateEnd', dateEnd)"
+        dateFormat="dd/mm/yy"
+        [iconDisplay]="'input'"
+        appendTo="body"
+        [showIcon]="true"
+        inputId="hasta"
+        placeholder="Hasta" />
+    </app-collapse>
+
+    <app-collapse title="Remitente" >
+      <p-autoComplete
+        class="autocomplete"
+        [(ngModel)]="remitenteItems"
+        [suggestions]="filteredRemitente"
+        (completeMethod)="searchRemitentes($event)"
+        (ngModelChange)="actualizarFiltro('remitentesItems', remitenteItems)"
+        [multiple]="true" />
+    </app-collapse>
+
+    <app-collapse title="Destinatario" >
+      <p-autoComplete
+        class="autocomplete"
+        [(ngModel)]="destinatarioItems"
+        [suggestions]="filteredDestinatario"
+        (completeMethod)="searchDestinatarios($event)"
+        (ngModelChange)="actualizarFiltro('destinatariosItems', destinatarioItems)"
+        [multiple]="true" />
+    </app-collapse>
+
+    <app-collapse title="Transportista">
+      <p-autoComplete
+        class="autocomplete"
+        [(ngModel)]="transportistaItems"
+        [suggestions]="filteredTransportista"
+        (completeMethod)="searchTransportista($event)"
+        (ngModelChange)="actualizarFiltro('transportistaItems', transportistaItems)"
+        [multiple]="true" />
+    </app-collapse>
+
+    <app-collapse title="Conductor">
+      <p-autoComplete
+        class="autocomplete"
+        [(ngModel)]="conductorItems"
+        [suggestions]="filteredConductor"
+        (completeMethod)="searchConductor($event)"
+        (ngModelChange)="actualizarFiltro('conductorItems', conductorItems)"
+        [multiple]="true" />
+    </app-collapse>
+    
+    <app-collapse title="Estado" >
+      <div class="buttons-filter">
+        <div class="buttons-filter-row">
+          <p-button label="Pendiente"
+            icon="pi pi-question-circle"
+            [rounded]="true"
+            [severity]="buttonStates.pendiente ? null : 'secondary'"
+            (click)="toggleButtonState('pendiente')" />
+          <p-button label="Cargando"
+            icon="pi pi-sync"
+            [rounded]="true"
+            [severity]="buttonStates.cargando ? null : 'secondary'"
+            (click)="toggleButtonState('cargando')" />
+        </div>
+        <div class="buttons-filter-row">
+          <p-button label="En tránsito"
+          icon="pi pi-truck"
+            [rounded]="true"
+            [severity]="buttonStates.enTransito ? null : 'secondary'"
+            (click)="toggleButtonState('enTransito')" />
+          <p-button label="Entregado"
+            icon="pi pi-check"
+            [rounded]="true"
+            [severity]="buttonStates.entregado ? null : 'secondary'"
+            (click)="toggleButtonState('entregado')" />
+        </div>
+        <div class="buttons-filter-row-single">
+          <p-button label="Incidencia"
+            [rounded]="true"
+            [severity]="buttonStates.incidencia ? null : 'secondary'"
+            (click)="toggleButtonState('incidencia')" />
+        </div>
+      </div>
+    </app-collapse>
+    <app-collapse title="CMR" >
+      <div class="buttons-filter">
+        <div class="buttons-filter-row">
+          <p-button label="Borrador"
+            [rounded]="true"
+            [severity]="buttonCMR.borrador ? null : 'secondary'"
+            (click)="toggleButtonCMR('borrador')" />
+          <p-button label="Planificado"
+            [rounded]="true"
+            [severity]="buttonCMR.planificado ? null : 'secondary'"
+            (click)="toggleButtonCMR('planificado')" />
+        </div>
+        <div class="buttons-filter-row">
+          <p-button label="Completado"
+            [rounded]="true"
+            [severity]="buttonCMR.completado ? null : 'secondary'"
+            (click)="toggleButtonCMR('completado')" />
+          <p-button label="Incompleto"
+            [rounded]="true"
+            [severity]="buttonCMR.incompleto ? null : 'secondary'"
+            (click)="toggleButtonCMR('incompleto')" />
+        </div>        
+      </div>
+    </app-collapse>
+  </div>
+  <div class="actions-filters">
+    <p-button label="Resetear" class="button-transparent" icon="pi pi-refresh" severity="secondary" size="small" (click)="clear()" />
+    <p-button label="Aceptar" icon="pi pi-check" size="small" (click)="aplicarFiltros()" />
+  </div>
+</div>
+

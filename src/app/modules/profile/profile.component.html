@@ -1,0 +1,58 @@
+<!-- bradcrumb and dynamic buttons-->
+<div class="profile-container">
+  <h1 class="title-profile">Perfil</h1>
+</div>
+  <!-- tabs and lazy load contents -->
+  <div class="card">
+    <p-tabView>
+      <p-tabPanel>
+        <ng-template pTemplate="header">
+          <div class="flex align-items-center gap-2">
+            <i class="pi pi-user-edit" style="font-size: 14px"></i>
+            <span class="font-bold white-space-nowrap m-0 text-sm">
+              Editar perfil
+            </span>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="content">
+          <div class="custom-tab-content">
+            <!-- <app-document-shipment></app-document-shipment> -->
+          </div>
+        </ng-template>
+      </p-tabPanel>
+
+      <p-tabPanel>
+        <ng-template pTemplate="header">
+          <div class="flex align-items-center gap-2">
+            <i class="pi pi-bell" style="font-size: 14px"></i>
+            <span class="font-bold white-space-nowrap m-0 text-sm">
+              Notificaciones
+            </span>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="content">
+          <div class="custom-tab-content">
+            <!-- <app-routes-shipment></app-routes-shipment> -->
+          </div>
+        </ng-template>
+      </p-tabPanel>
+
+      <p-tabPanel>
+        <ng-template pTemplate="header">
+          <div class="flex align-items-center gap-2">
+            <i class="pi pi-shield" style="font-size: 14px"></i>
+            <span class="font-bold white-space-nowrap m-0 text-sm">
+              Seguridad
+            </span>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="content">
+          <div class="custom-tab-content">
+            <!-- <app-driver-shipment></app-driver-shipment> -->
+          </div>
+        </ng-template>
+      </p-tabPanel>
+
+
+    </p-tabView>
+  </div>

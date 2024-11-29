@@ -1,0 +1,74 @@
+<div class="flex flex-column gap-2">
+  <div>
+    <p-table [value]="annexList()" [(selection)]="selectedAttachment" dataKey="id"
+      [tableStyle]="{ 'min-width': '50rem'}" scrollable="true" [scrollHeight]="'calc(100vh - 358px)'">
+      <ng-template pTemplate="header">
+        <tr>
+          <th style="width: 4rem" class="border-none surface-section">
+            <p-tableHeaderCheckbox class="form-header-checkbox" />
+          </th>
+          <th pSortableColumn="fileName" class="text-blue-500 border-none surface-section">
+            Nombre del archivo
+            <p-sortIcon class="text-blue-500" field="fileName" />
+          </th>
+          <th pSortableColumn="author" class="text-blue-500 border-none surface-section">
+            Autor <p-sortIcon class="text-blue-500" field="author" />
+          </th>
+          <th pSortableColumn="date" class="text-blue-500 border-none surface-section">
+            Fecha <p-sortIcon class="text-blue-500" field="date" />
+          </th>
+          <th class="text-blue-500 border-none surface-section">
+            Acción
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-attachment>
+        <tr class="content-body-table">
+          <td class="border-none">
+            <p-tableCheckbox [value]="attachment" />
+          </td>
+          <td class="border-none font-semibold" [style]="{'min-width': '53dvw'}">
+            <div class="flex gap-2 align-items-center">
+              <i class="pi border-1 p-2 border-round" [ngClass]="{
+                'pi-image text-blue-400': attachment.fileType === 'image',
+                'pi-file text-green-400': attachment.fileType === 'document'
+              }"></i>
+              <span class="attachment-name text-sm">{{ attachment.fileName }}</span>
+            </div>
+          </td>
+          <td class="border-none text-sm" [style]="{'min-width': '150px'}">{{ attachment.author }}</td>
+          <td class="border-none text-sm" [style]="{'min-width': '150px'}">{{ attachment.date }}</td>
+          <td class="border-none" [style]="{'width': '60px'}">
+            <div class="flex gap-2">
+              <div (click)="openAttachment(attachment)">
+                <i
+                  class="pi pi-eye text-blue-400 border-1 p-3 border-round hover:bg-blue-400 hover:text-white cursor-pointer transition-all transition-duration-300"></i>
+              </div>
+              <div (click)="attachment.isDeleteAble && showConfirmDialog($event, 'delete')">
+                <i [ngClass]="{
+                  'bg-gray-300': !attachment.isDeleteAble,
+                  'bg-red-400 hover:bg-red-500': attachment.isDeleteAble
+                }" class="pi pi-trash border-1 p-3 border-round text-white cursor-pointer"></i>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="5">
+            <div class="w-full text-center text-sm text-gray-400">No se encontraron registros</div>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  <div class="flex gap-2 justify-content-center md:justify-content-end align-items-center broder border-top-1 border-gray-300 p-3">
+    <p-button [outlined]="true" class="mr-2" label="Subir archivo" icon="pi pi-upload" (click)="openUploadModal()" />
+    <p-button [outlined]="true" class="mr-2" label="Descargar" icon="pi pi-download" />
+    <p-button label="Enviar" icon="pi pi-send" />
+  </div>
+</div>
+<app-confirm-dialog></app-confirm-dialog>
+
+<app-upload-modal class="upload-modal" [visible]="isUploadModalVisible" (visibleChange)="handleModalClosed()" (filesUploaded)="handleFilesUploaded($event)"></app-upload-modal>

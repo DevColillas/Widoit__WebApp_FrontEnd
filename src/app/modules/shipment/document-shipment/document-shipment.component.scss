@@ -1,0 +1,79 @@
+input[readonly],
+p-toggleButton[disabled] {
+  background-color: #f4f4f4;
+  cursor: not-allowed;
+}
+
+.form-content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-heading {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+.form-half{
+  width: 50%;
+}
+
+.form-cols{
+  display: flex;
+  gap: 20px;
+}
+
+#document-number-help, #file-number-help, #internal-marker-help{
+  margin-top: 3.5px;
+}
+
+.form-section {
+  color: #4b5563;
+  padding: 40px 2px 0px 2px;
+}
+
+.form-body {
+  margin-top: 20px;
+  color: #4b5563 !important;
+}
+
+#short-doc-num ::ng-deep .p-inputtext:disables{
+  color: #4B5563 !important;
+}
+
+.first-btn ::ng-deep .p-togglebutton.p-button {
+  border-radius: 6px 0px 0px 6px !important;
+  margin-left: 8px;
+}
+
+.second-btn ::ng-deep .p-togglebutton.p-button {
+  border-radius: 0px 6px 6px 0px !important;
+}
+
+.toggle-content ::ng-deep .p-togglebutton.p-button {
+  background-color: #FFFFFF !important;  /* Fondo blanco cuando está desactivado */
+  border: 1px solid #D1D5DB;
+  color: #4B5563;
+  transition: none;
+}
+
+.toggle-content ::ng-deep .p-togglebutton .p-button-label {
+  box-shadow: none;
+  color: #4B5563 !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+.toggle-content ::ng-deep .p-togglebutton.p-highlight.p-button {
+  background-color: var(--theme-primary-color, #3B82F6) !important;
+  border: 1px solid var(--theme-primary-color, #3B82F6);
+  color: white;
+}
+
+.toggle-content ::ng-deep .p-togglebutton.p-highlight .p-button-label {
+  box-shadow: none;
+  background-color: var(--theme-primary-color, #3B82F6) !important;
+  color: white !important;
+}

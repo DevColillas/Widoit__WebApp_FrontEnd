@@ -1,0 +1,17 @@
+<div class="tl-content" *ngFor="let item of timelineData">
+  <div class="tl-time">
+    <div class="tl-time-date">{{ item.date }}</div>
+    <div class="tl-time-hour">{{ item.time }}</div>
+  </div>
+  <div class="tl-icon">
+    <p-avatar 
+      [icon]="item.icon" 
+      [style]="{ 'background-color': '#3B82F6', color: '#FFFFFF' }"  
+      shape="circle"
+    ></p-avatar>
+    @if(item.icon !== 'pi pi-check') {
+      <div class="tl-line"></div>
+    }
+  </div>
+  <div class="tl-desc">{{ item.description }}</div>
+</div>

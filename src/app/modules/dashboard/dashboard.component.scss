@@ -1,0 +1,27 @@
+.dashboard-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px
+}
+.title-dashboard{
+  color: #4B5563;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-right: auto;
+}
+
+.custom-new-button ::ng-deep .p-button{
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  padding: 10px 14px !important;
+  
+  .p-button-label{
+    color: #fff !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+  }
+}

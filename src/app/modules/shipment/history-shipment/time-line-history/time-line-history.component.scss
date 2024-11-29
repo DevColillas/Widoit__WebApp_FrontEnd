@@ -1,0 +1,50 @@
+.tl-content{
+    display: flex;
+    padding-top: 7px;
+    gap: 14px;
+}
+
+.tl-time{
+    width: 200px;
+    padding-top: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tl-time-date, .tl-time-hour{
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: right;
+    color: #4B5563;
+}
+
+.tl-time-hour{
+    color: #6B7280;
+}
+
+.tl-desc{
+    padding-top: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #4B5563;
+}
+
+.tl-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+::ng-deep .p-avatar.p-avatar-circle{
+    border: none;
+
+}
+
+.tl-line{
+    width: 2px;
+    height: 28px;
+    background-color: #E5E7EB;
+}

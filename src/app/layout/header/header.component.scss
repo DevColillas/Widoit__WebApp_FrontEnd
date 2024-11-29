@@ -1,0 +1,81 @@
+::ng-deep .custom-header-toggle-btn {
+  border: 1px solid var(--theme-primary-color, #3B82F6);
+  color: var(--theme-primary-color, #3B82F6);
+  background-color: transparent;
+  height: 39px;
+
+  .p-button {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    border-radius: 6px;
+  }
+}
+
+.toggle-header ::ng-deep .p-togglebutton.p-button .p-button-label,
+.p-togglebutton.p-button .p-button-icon {
+  position: relative;
+  transition: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+::ng-deep .p-togglebutton.p-highlight .p-button-label {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none;
+  border-radius: 0px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.p-badge {
+  border-radius: 50%;
+  min-width: 14px;
+  min-height: 14px;
+}
+
+::ng-deep .p-avatar.p-avatar-circle {
+  border: 1px solid var(--input-borderColor, #D1D5DB);
+  background: transparent;
+}
+
+.rounded {
+  border-radius: 50%;
+  background: var(--Lara-Avatar-avatarBg, #DEE2E6);
+}
+
+span.badge {
+  position: absolute;
+  top: -10.5px;
+  right: -10.5px;
+}
+
+.pi-angle-down {
+  color: var(--surface-900) !important;
+}
+
+
+::ng-deep .p-menubar .p-menuitem>.p-menuitem-content .p-menuitem-link .p-menuitem-text {
+  color: #4B5563 !important;
+  font-size: 14px;
+}
+
+::ng-deep .p-menubar .p-menuitem>.p-menuitem-content .p-menuitem-link .p-menuitem-icon {
+  font-size: 14px;
+  color: #4B5563;
+}
+
+
+.user-options-menu ::ng-deep .p-button {
+  color: #4B5563;
+  background: transparent;
+  border: 0px solid #3B82F6;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s,
+    outline-color 0.2s;
+  border-radius: 0px;
+}

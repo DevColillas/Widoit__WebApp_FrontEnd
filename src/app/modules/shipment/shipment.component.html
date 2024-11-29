@@ -1,0 +1,130 @@
+<!-- bradcrumb and dynamic buttons-->
+<div class="shipment-header ">
+  <div>
+    <app-breadcrumb [documentNumber]="documentNumber"></app-breadcrumb>
+  </div>
+  <div class="button-group">
+    <p-button (onClick)="shipmentService.submitDriverForm()" label="Guardar" [text]="true" icon="pi pi-save"
+      size="small"></p-button>
+    <p-button label="Cancelar" [text]="true" icon="pi pi-times-circle" size="small"></p-button>
+    <p-button label="Planificar" [text]="true" icon="pi pi-check-circle" size="small"></p-button>
+    <p-button label="Eliminar" [text]="true" icon="pi pi-trash" size="small"></p-button>
+  </div>
+</div>
+<!-- tabs and lazy load contents -->
+<div class="card">
+  <p-tabView [activeIndex]="activeShipmentIndex" (tabChange)="onTabChange($event)">
+    <p-tabPanel>
+      <ng-template pTemplate="header">
+        <div class="flex align-items-center gap-2">
+          <i class="pi pi-file" style="font-size: 14px"></i>
+          <span class="font-bold white-space-nowrap m-0 text-sm">
+            Documento
+          </span>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="content">
+        <div class="custom-tab-content">
+          <app-document-shipment></app-document-shipment>
+        </div>
+      </ng-template>
+    </p-tabPanel>
+
+    <p-tabPanel>
+      <ng-template pTemplate="header">
+        <div class="flex align-items-center gap-2">
+          <i class="pi pi-map" style="font-size: 14px"></i>
+          <span class="font-bold white-space-nowrap m-0 text-sm">
+            Ruta
+          </span>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="content">
+        <div class="custom-tab-content">
+          <app-routes-shipment></app-routes-shipment>
+        </div>
+      </ng-template>
+    </p-tabPanel>
+<!--
+    <p-tabPanel>
+      <ng-template pTemplate="header">
+        <div class="flex align-items-center gap-2">
+          <i class="pi pi-truck" style="font-size: 14px"></i>
+          <span class="font-bold white-space-nowrap m-0 text-sm">
+            Conductor
+          </span>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="content">
+        <div class="custom-tab-content">
+          <app-driver-shipment></app-driver-shipment>
+        </div>
+      </ng-template>
+    </p-tabPanel> -->
+
+    <p-tabPanel>
+      <ng-template pTemplate="header">
+        <div class="flex align-items-center gap-2">
+          <i class="pi pi-box" style="font-size: 14px"></i>
+          <span class="font-bold white-space-nowrap m-0 text-sm">
+            Productos
+          </span>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="content">
+        <div class="custom-tab-content">
+          <app-product-shipment></app-product-shipment>
+        </div>
+      </ng-template>
+    </p-tabPanel>
+
+    <p-tabPanel>
+      <ng-template pTemplate="header">
+        <div class="flex align-items-center gap-2">
+          <i class="pi pi-paperclip" style="font-size: 14px"></i>
+          <span class="font-bold white-space-nowrap m-0 text-sm">
+            Anexos
+          </span>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="content">
+        <div class="custom-tab-content">
+          <app-annexes-shipment></app-annexes-shipment>
+        </div>
+      </ng-template>
+    </p-tabPanel>
+
+    <p-tabPanel>
+      <ng-template pTemplate="header">
+        <div class="flex align-items-center gap-2">
+          <i class="pi pi-history" style="font-size: 14px"></i>
+          <span class="font-bold white-space-nowrap m-0 text-sm">
+            Historial
+          </span>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="content">
+        <div class="custom-tab-content">
+          <app-history-shipment></app-history-shipment>
+        </div>
+      </ng-template>
+    </p-tabPanel>
+
+    <p-tabPanel>
+      <ng-template pTemplate="header">
+        <div class="flex align-items-center gap-2">
+          <i class="pi pi-exclamation-triangle" style="font-size: 14px"></i>
+          <span class="font-bold white-space-nowrap m-0 text-sm">
+            Incidencias
+          </span>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="content">
+        <div class="custom-tab-content">
+          <app-incidence-shipment></app-incidence-shipment>
+        </div>
+      </ng-template>
+    </p-tabPanel>
+
+  </p-tabView>
+</div>

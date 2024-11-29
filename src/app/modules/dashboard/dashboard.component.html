@@ -1,0 +1,15 @@
+<div class="dashboard-container">
+  <h1 class="title-dashboard">Lista de pedidos</h1>
+  <div>
+    <app-dynamic-button-group [statuses]="statusesSignal()" [selectedDocumentNumber]="documentNumberSignal()" ></app-dynamic-button-group>
+  </div>
+  <div>
+    <!-- todo: el botón abrirá un modal, y luego se redirigirá a la pantalla de shipment a través del id generado después de completar formulario de modal  -->
+    <p-button class="custom-new-button" label="Nuevo" icon="pi pi-plus" iconPos="right" size="small" (onClick)="openNewDocumentModal()"></p-button>
+  </div>
+</div>
+<app-dashboard-list (statusesChange)="onStatusesChange($event)" (documentNumberofShipmentSelected)="onDocumentNumberChange($event)"></app-dashboard-list>
+
+@if (showNewDocumentModal) {
+  <app-new-document-modal [visible]="showNewDocumentModal" (visibleChange)="showNewDocumentModal = $event"></app-new-document-modal>
+}

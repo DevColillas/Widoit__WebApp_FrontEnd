@@ -1,0 +1,125 @@
+<div class="card container">
+  <div class="header-bar flex justify-content-start mb-3 gap-2">
+    <!-- open/close filter button -->
+    @if(!displaySidebar){
+    <p-button icon="pi pi-filter" [outlined]="true" severity="secondary" (click)="toggleSidebar()"></p-button>
+    }
+    @if (displaySidebar) {
+    <p-button icon="pi pi-filter-slash" (click)="toggleSidebar()"></p-button>
+    }
+    <!-- searchbar -->
+    <span class="p-input-icon-left">
+      <i class="pi pi-search"></i>
+      <input pInputText type="text" [(ngModel)]="searchValue" (input)="onSearch($event)" placeholder="Buscar" />
+    </span>
+    <!-- setting button -->
+    <p-button icon="pi pi-cog" outlined="true" severity="secondary" (click)="openConfigTableModal()"></p-button>
+  </div>
+
+  <div class="flex-container tableSidebar" [ngClass]="{'with-sidebar': displaySidebar}">
+    <!-- Sidebar para filtros que ocupa espacio de columna -->
+    <div *ngIf="displaySidebar" class="sidebar">
+      <h3 class="title-sidebar">Filtros</h3>
+      <!-- Campos de filtro -->
+      <app-dashboard-filters class="component-filter" [shipmentListSorted]="shipmentListSorted"
+        [filtersSaved]="filtersSaved" (filtersApplied)="applyFilters($event)"
+        (clearFilters)="clearSearch()"></app-dashboard-filters>
+    </div>
+
+    <!-- Contenedor de la tabla que se ajusta según la visibilidad del sidebar -->
+    <div class="table-container">
+      <!-- Tabla de datos -->
+      <p-table #shipmentTable sortMode="multiple" [value]="(shipmentList$ | async) || []" selectionMode="multiple"
+        [(selection)]="selectedShipment" [tableStyle]="{'min-width': '50rem'}" [styleClass]="'p-datatable-sm'"
+        scrollable="true" [scrollHeight]="'calc(100vh - 251px)'"
+        [globalFilterFields]="['fileNumber', 'loadingDateTime', 'unloadingDateTime', 'sender', 'recipient', 'driver', 'status', 'cmr', 'dispatchDate', 'documentNumber', 'loadingPlace', 'transporter']"
+        (onRowSelect)="onRowToggle($event, true)" (onRowUnselect)="onRowToggle($event, false)">
+
+        <ng-template pTemplate="header" let-shipment>
+          <tr>
+            <!-- Checkbox para seleccionar o deseleccionar todos -->
+            <th class="header-menu-checkbox">
+              <p-tableHeaderCheckbox class="header-checkbox" />
+            </th>
+            <!-- Mostrar solo las columnas con isHidden = false -->
+            <ng-container *ngFor="let col of cols">
+              <th class="header-sort-item" *ngIf="col.isVisible" [pSortableColumn]="col.field" pReorderableColumn>
+                {{ col.header }}
+                <p-sortIcon [field]="col.field"></p-sortIcon>
+              </th>
+            </ng-container>
+            <th class="header-sort-favorite">
+              <i class="pi" [ngClass]="isFavoriteSorted ? 'pi-bookmark-fill' : 'pi-bookmark'"
+                (click)="toggleFavoriteSorting()"></i>
+            </th>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-shipment>
+          <tr [pSelectableRow]="shipment">
+            <!-- Checkbox de selección individual por fila -->
+            <td class="body-checkbox">
+              <p-tableCheckbox [value]="shipment" [pSelectableRow]="shipment" />
+            </td>
+            <ng-container *ngFor="let col of cols">
+              <td class="body-table-content" *ngIf="col.isVisible" #cell
+                [style]="{'min-width': getMinWidth(col.field), 'max-width': getMaxWidth(col.field)}"
+                [pTooltip]="isTextEllipsed(cell) ? shipment[col.field] : null" tooltipPosition="top" showDelay="1000"
+                hideDelay="300">
+
+                <!-- Renderizado del chip para la columna 'cmr' -->
+                <ng-container *ngIf="col.field === 'cmr'; else checkStatus">
+                  <p-chip [label]="shipment.cmr" [styleClass]="getCmrChipClass(shipment.cmr)">
+                  </p-chip>
+                </ng-container>
+
+                <!-- Renderizado del chip para la columna 'status' con icono -->
+                <ng-template #checkStatus>
+                  <ng-container *ngIf="col.field === 'status'; else fileNumber">
+                    <p-chip [label]="shipment.status[0]" [icon]="getStatusIcon(shipment.status[0])"
+                      [styleClass]="getStatusChipClass(shipment.status)">
+                    </p-chip>
+                  </ng-container>
+                </ng-template>
+
+                <!-- Condición para hacer clic en el fileNumber -->
+                <ng-template #fileNumber>
+                  <ng-container *ngIf="col.field === 'fileNumber'; else textCell">
+                    <ng-container *ngIf="shipment[col.field]; else noExp">
+                      <a class="fileNumber" (click)="navigateToShipment(shipment.documentNumber)">
+                        {{ shipment[col.field] }}
+                      </a>
+                    </ng-container>
+                    <ng-template #noExp>
+                      <a class="fileNumber" (click)="navigateToShipment(shipment.documentNumber)">
+                        NO EXP
+                      </a>
+                    </ng-template>
+                  </ng-container>
+                </ng-template>
+
+                <!-- Resto de celdas normales -->
+                <ng-template #textCell>
+                  <span></span>
+                  {{ formatDate(shipment[col.field], col.field) }}
+                </ng-template>
+              </td>
+            </ng-container>
+
+            <!-- favs -->
+            <td class="body-favorite">
+              <i class="pi" [ngClass]="shipment.isFavorite ? 'pi-star-fill' : 'pi-star'"
+                (click)="toggleFavorite(shipment, $event)"></i>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>
+
+<!-- Open congig table modal -->
+@if(showConfigTableModal){
+<app-dashboard-table-config [visible]="showConfigTableModal" (visibleChange)="showConfigTableModal = $event"
+  [columns]="cols" (applyChanges)="onApplyChanges($event)"></app-dashboard-table-config>
+}

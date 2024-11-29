@@ -1,0 +1,117 @@
+.sidebar-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+::ng-deep .scroll-content {
+    max-height: calc(100vh - 390px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+  }
+::ng-deep .p-autocomplete-token{
+    padding: 5.25px 10.5px;
+    border-radius: 16px;
+    background-color: #E5E7EB;
+    color: #4B5563;
+    font-size: 14px;
+    font-weight: 400;
+}
+::ng-deep .buttons-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    p-button{
+        height: 100% !important;
+    }
+}
+.buttons-filter-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    ::ng-deep p-button{
+        width: 50%;
+
+        ::ng-deep button{
+            width: 100%;
+
+            ::ng-deep .p-button-icon-left{
+                margin-right: 0px;
+                width: 14px;
+            }
+        }
+    }
+}
+.buttons-filter-row-single{
+    width: 100%;
+    ::ng-deep p-button{
+        width: 100%;
+
+        ::ng-deep button{
+            width: 100%;
+        }
+    }
+}
+
+::ng-deep .p-accordion-content .p-button{
+    padding: 4px 8px;
+    border-radius: 44px;
+    font-size: 10.5px;
+    font-weight: 600;
+    line-height: normal;
+}
+::ng-deep .p-accordion-content .p-button-secondary{
+    background-color: #FFFFFF !important;
+    color: #4B5563 !important;
+    border: 1px solid #E5E7EB !important;
+}
+
+.actions-filters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    gap: 9px;
+
+    p-button{
+        width: 109px;
+    }
+}
+
+/* Si el ancho del contenedor es 154px o menos */
+@media (max-width: 154px) {
+  .actions-filters {
+      padding-top: 20px;
+  }
+}
+
+::ng-deep .actions-filters .p-button{
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10.5px 17.5px;
+    gap: 7px;
+}
+
+::ng-deep .actions-filters .p-button-secondary{
+    background-color: #FFFFFF;
+    border: none;
+    color: var(--primary-color);
+}
+
+::ng-deep .actions-filters .p-button .p-button-icon-left{
+    margin-right: 0px;
+}
+
+::ng-deep .autocomplete .p-autocomplete {
+    display: block;
+}
+
+::ng-deep .p-autocomplete-panel .p-autocomplete-items .p-autocomplete-item {
+  padding: 0.1rem 0.3rem;
+  font-size: 14px;
+}

@@ -1,0 +1,11 @@
+<div class="button-group">
+  <p-button
+  class="custom-button"
+    *ngFor="let button of buttons"
+    [label]="button.label"
+    [icon]="button.icon"
+    (onClick)="button.action()"
+    [text]="true"
+    size="small"
+  ></p-button>
+</div>

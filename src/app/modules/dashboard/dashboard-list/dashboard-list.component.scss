@@ -1,0 +1,288 @@
+.container {
+  height: calc(100% - 56px) !important;
+}
+
+.header-bar {
+  width: 100% !important;
+}
+
+span.p-input-icon-left{
+  flex: 1;
+
+  input {
+    width: 100%;
+  }
+}
+::ng-deep .p-datatable {
+  .p-sortable-column .p-sortable-column-icon {
+    color: var(--primary-color);
+    margin-left: 7px;
+    width: 14px;
+    height: 14px;
+    font-weight: 700;
+  }
+}
+
+::ng-deep .p-datatable.p-datatable-sm .p-datatable-thead > tr > th {
+  padding: 10px 10px;
+}
+
+th.header-menu-checkbox {
+  background-color: white !important;
+  border-width: 0px !important;
+  text-align: start !important;
+  padding: 10px 8px !important;
+}
+
+.header-menu-checkbox ::ng-deep .p-checkbox-box {
+  width: 20px !important;
+  height: 20px !important;
+  border: 2px solid var(--primary-color) !important;
+}
+
+.body-checkbox {
+  border-width: 0px !important;
+}
+
+.body-checkbox ::ng-deep .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+  border-color: transparent;
+}
+
+th.header-sort-item {
+  background: white !important;
+  color: var(--theme-primary-color, #3B82F6) !important;
+  border-width: 0px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+
+  p-sortIcon {
+    font-size: 1rem !important;
+  }
+}
+
+th.header-sort-favorite{
+  background-color: white !important;
+  text-align: center !important;
+  border-width: 0px !important;
+  cursor: pointer !important;
+
+  i {
+    font-size: 1rem !important;
+    color: var(--theme-primary-color, #3B82F6) !important;
+    width: 40px !important;
+  }
+}
+
+.flex-container {
+  display: flex;
+  gap: 19px;
+}
+
+.with-sidebar .table-container {
+  flex: 5;
+}
+
+.tableSidebar{
+  height: calc(100vh - 250px);
+}
+
+td.body-table-content {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-width: 0px;
+  font-size: 12.25px;
+  color: var(--table-body-row-color, #4B5563);
+}
+
+td.body-favorite{
+  border-width: 0px !important;
+  text-align: center !important;
+
+  i.pi-star {
+    font-size: 1rem !important;
+    color: #E5E7EB !important;
+    width: 40px !important;
+    cursor: pointer;
+  }
+
+  i.pi-star-fill {
+    font-size: 1rem !important;
+    color: var(--theme-primary-color, #3B82F6) !important;
+    width: 40px !important;
+    cursor: pointer;
+  }
+}
+
+
+.sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-width: 175px;
+  max-width: 250px;
+  /* Ajusta el ancho según necesites */
+  border-right: 1px solid #ddd;
+  padding: 0px 20px 0px 0px;
+}
+
+.component-filter{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.table-container {
+  flex: 4;
+}
+
+// chips
+::ng-deep .p-chip {
+  display: flex;
+  width: 80px;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px;
+}
+
+::ng-deep .pi-question-circle:before {
+  font-size: 14px;
+}
+
+::ng-deep .pi-check:before {
+  font-size: 14px;
+}
+
+::ng-deep .pi-sync:before {
+  font-size: 14px;
+}
+
+::ng-deep .pi-truck:before {
+  font-size: 14px;
+}
+
+
+::ng-deep .chip-default {
+  max-height: 22px;
+  display: flex;
+  width: 95px;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  padding: 4px 8px 4px 4px;
+  font-weight: 600px;
+
+  border: 1px solid var(--skeleton-background, #E5E7EB);
+  background: var(--skeleton-animation-background, rgba(255, 255, 255, 0.40));
+
+  color: var(--global-textSecondaryColor, #6B7280);
+
+}
+
+::ng-deep .chip-with-incidence{
+  max-height: 22px;
+  display: flex;
+  width: 95px;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  padding: 4px 8px 4px 4px;
+  font-weight: 600px;
+
+  border: 1px solid var(--skeleton-background, #E24C4C);
+  background: var(--button-danger-background, #FFE7E6B2);
+
+  color: #E24C4C;
+}
+
+::ng-deep .chip-exclamation {
+  max-height: 22px;
+  display: flex;
+  width: 95px;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  padding: 4px 8px 4px 4px;
+  font-weight: 600px;
+
+  border: 1px solid var(--skeleton-background, #E5E7EB);
+  background: var(--button-danger-background, #EF4444);
+
+  color: white;
+}
+
+
+::ng-deep .p-chip-text {
+  font-size: 10.5px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0px;
+}
+
+::ng-deep .chip-planificado {
+  max-height: 22px;
+  border-radius: 16px;
+  border: 1px solid var(--button-outlined-active-background, rgba(59, 130, 246, 0.16));
+  background: var(--button-outlined-hover-background, rgba(59, 130, 246, 0.04));
+
+  .p-chip-text {
+    color: var(--button-background, #3B82F6);
+  }
+
+}
+
+::ng-deep .chip-borrador {
+  max-height: 22px;
+  border-radius: 16px;
+  border: 1px solid var(--button-help-outlined-active-background, rgba(168, 85, 247, 0.16));
+  background: var(--button-help-outlined-hover-background, rgba(168, 85, 247, 0.04));
+
+  .p-chip-text {
+    color: var(--button-help-background, #A855F7);
+  }
+}
+
+::ng-deep .chip-completado {
+  max-height: 22px;
+  border-radius: 16px;
+  border: 1px solid var(--button-success-outlined-active-background, rgba(34, 197, 94, 0.16));
+  background: var(--button-success-outlined-hover-background, rgba(34, 197, 94, 0.04));
+
+  .p-chip-text {
+    color: var(--button-success-background, #22C55E);
+  }
+}
+
+::ng-deep .chip-incompleto {
+  max-height: 22px;
+  border-radius: 16px;
+  border: 1px solid var(--skeleton-background, #F59E0B29);
+  background: var(--skeleton-animation-background, rgba(245, 158, 11, 0.039));
+
+  .p-chip-text {
+    color: var(--global-textSecondaryColor, #F97316);
+
+  }
+}
+
+
+::ng-deep .title-sidebar{
+  color: #4B5563;
+  font-size: 17.5px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  margin: 0px 0px 14px 0px;
+}
+
+::ng-deep a.fileNumber {
+  text-decoration: none !important; /* Elimina el subrayado por defecto */
+  color: inherit !important; /* Hereda el color de texto del contenedor o aplica color específico */
+  cursor: pointer !important;
+
+  &:hover {
+    text-decoration: underline !important; /* Agrega el subrayado al pasar el cursor */
+    color: var(--primary-color) !important; /* Cambia el color solo si lo deseas, puedes omitirlo */
+  }
+}

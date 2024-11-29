@@ -1,0 +1,18 @@
+<p-dialog [(visible)]="visible" [modal]="true" [draggable]="false" [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+  (onHide)="onCancel()" [closable]="false" (visibleChange)="visibleChange.emit($event)">
+  <p-fileUpload class="modal" name="demo[]" url="https://www.primefaces.org/cdn/api/upload.php"
+  progress="true" onprogress="onProgress($event)" (onUpload)="onUpload($event)" [multiple]="true" accept=".jpg,.jpeg,.pdf,.doc,.docx,.webp,.png,.txt" maxFileSize="10000000" chooseIcon="pi pi-copy"
+    chooseLabel="Seleccionar archivos" uploadIcon="pi pi-upload" uploadLabel="Subir archivos" cancelIcon="pi pi-times"
+    cancelLabel="Cancelar" timesIcon="pi pi-times" (onClear)="onCancel()" disabled="false" cancelStyleClass="always-enabled">
+    <ng-template pTemplate="content">
+      <div class="file-upload-content">
+        <p class="drag-drop-text">Arrastre y suelte archivos aquí para cargarlos.</p>
+        <ul *ngIf="uploadedFiles.length">
+          <li *ngFor="let file of uploadedFiles">
+            {{ file.name }} - {{ file.size }} bytes
+          </li>
+        </ul>
+      </div>
+    </ng-template>
+  </p-fileUpload>
+</p-dialog>

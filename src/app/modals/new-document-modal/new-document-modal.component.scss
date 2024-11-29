@@ -1,0 +1,75 @@
+// estilos generles de tabla
+.content-modal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content-modal-container span {
+  margin: 0px !important;
+  text-align: center !important;
+}
+
+.form-section {
+  color: #4b5563;
+  padding: 20px 2px;
+}
+
+label {
+  color: #4B5563 !important;
+}
+small {
+  margin-top: 3.5px !important;
+}
+
+.form-heading {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+}
+.form-body {
+  margin-top: 20px;
+  color: #4b5563 !important;
+}
+
+#short-doc-num ::ng-deep .p-inputtext:disables{
+  color: #4B5563 !important;
+}
+
+/* new-document-modal.component.css */
+
+.first-btn ::ng-deep .p-togglebutton.p-button {
+  border-radius: 6px 0px 0px 6px !important;
+  margin-left: 8px;
+}
+
+.second-btn ::ng-deep .p-togglebutton.p-button {
+  border-radius: 0px 6px 6px 0px !important;
+}
+
+
+::ng-deep .p-togglebutton.p-button {
+  background-color: #FFFFFF !important;  /* Fondo blanco cuando está desactivado */
+  border: 1px solid #D1D5DB;
+  color: #4B5563;
+  transition: none;
+}
+
+::ng-deep .p-togglebutton .p-button-label {
+  box-shadow: none;
+  color: #4B5563 !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+::ng-deep .p-togglebutton.p-highlight.p-button {
+  background-color: var(--theme-primary-color, #3B82F6) !important;
+  border: 1px solid var(--theme-primary-color, #3B82F6);
+  color: white;
+}
+
+::ng-deep .p-togglebutton.p-highlight .p-button-label {
+  box-shadow: none;
+  background-color: var(--theme-primary-color, #3B82F6) !important;
+  color: white !important;
+}

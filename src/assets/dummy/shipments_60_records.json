@@ -1,0 +1,975 @@
+[
+  {
+    "fileNumber": "",
+    "dispatchDate": "2024-04-02T00:00:00Z",
+    "documentNumber": "DOC-001",
+    "loadingDateTime": "2024-04-01T10:14:00Z",
+    "unloadingDateTime": "2024-04-01T18:08:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial San Juan",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Ana García",
+    "status": [
+      "Pendiente",
+      "Incidencia"
+    ],
+    "cmr": "Borrador",
+    "transporter": "Envios Plus"
+  },
+  {
+    "fileNumber": "344202",
+    "dispatchDate": "2024-04-07T00:00:00Z",
+    "documentNumber": "DOC-002",
+    "loadingDateTime": "2024-04-01T06:56:00Z",
+    "unloadingDateTime": "2024-04-01T13:38:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial San Juan",
+    "loadingPlace": "Almacén Central",
+    "driver": "Ana García",
+    "status": [
+      "Cargando"
+    ],
+    "cmr": "Planificado",
+    "transporter": "Transportes Nacionales"
+  },
+  {
+    "fileNumber": "344203",
+    "dispatchDate": "2024-04-06T00:00:00Z",
+    "documentNumber": "DOC-003",
+    "loadingDateTime": "2024-04-01T09:46:00Z",
+    "unloadingDateTime": "2024-04-01T12:21:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial San Juan",
+    "loadingPlace": "Centro de Distribución",
+    "driver": "Ana García",
+    "status": [
+      "En tránsito"
+    ],
+    "cmr": "Borrador",
+    "transporter": "Envios Plus"
+  },
+  {
+    "fileNumber": "344204",
+    "dispatchDate": "2024-04-07T00:00:00Z",
+    "documentNumber": "DOC-004",
+    "loadingDateTime": "2024-04-01T07:08:00Z",
+    "unloadingDateTime": "2024-04-01T17:55:00Z",
+    "sender": "Envases Express",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Centro de Distribución",
+    "driver": "Luis Pérez",
+    "status": [
+      "Entregado"
+    ],
+    "cmr": "Incompleto",
+    "transporter": "Transporte S.A."
+  },
+  {
+    "fileNumber": "344205",
+    "dispatchDate": "2024-04-09T00:00:00Z",
+    "documentNumber": "DOC-005",
+    "loadingDateTime": "2024-04-01T07:17:00Z",
+    "unloadingDateTime": "2024-04-01T15:03:00Z",
+    "sender": "Envases Express",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Ana García",
+    "status": [
+      "Pendiente",
+      "Incidencia"
+    ],
+    "cmr": "Planificado",
+    "transporter": "RapidCargo"
+  },
+  {
+    "fileNumber": "344206",
+    "dispatchDate": "2024-04-07T00:00:00Z",
+    "documentNumber": "DOC-006",
+    "loadingDateTime": "2024-04-01T09:13:00Z",
+    "unloadingDateTime": "2024-04-01T12:28:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial San Juan",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "Cargando"
+    ],
+    "cmr": "Completado",
+    "transporter": "Logística Express"
+  },
+  {
+    "fileNumber": "344207",
+    "dispatchDate": "2024-04-02T00:00:00Z",
+    "documentNumber": "DOC-007",
+    "loadingDateTime": "2024-04-01T09:25:00Z",
+    "unloadingDateTime": "2024-04-01T14:36:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Jose Pociello",
+    "status": [
+      "En tránsito"
+    ],
+    "cmr": "Borrador",
+    "transporter": "RapidCargo"
+  },
+  {
+    "fileNumber": "",
+    "dispatchDate": "2024-04-11T00:00:00Z",
+    "documentNumber": "DOC-008",
+    "loadingDateTime": "2024-04-01T06:50:00Z",
+    "unloadingDateTime": "2024-04-01T17:03:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Almacén Central",
+    "driver": "Miguel Lopez",
+    "status": [
+      "Entregado",
+      "Incidencia"
+    ],
+    "cmr": "Planificado",
+    "transporter": "Transportes Nacionales"
+  },
+  {
+    "fileNumber": "344209",
+    "dispatchDate": "2024-04-11T00:00:00Z",
+    "documentNumber": "DOC-009",
+    "loadingDateTime": "2024-04-01T07:11:00Z",
+    "unloadingDateTime": "2024-04-01T18:48:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial Santa Fe",
+    "loadingPlace": "Centro de Distribución",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "Pendiente",
+      "Incidencia"
+    ],
+    "cmr": "Borrador",
+    "transporter": "Transporte S.A."
+  },
+  {
+    "fileNumber": "344210",
+    "dispatchDate": "2024-04-04T00:00:00Z",
+    "documentNumber": "DOC-010",
+    "loadingDateTime": "2024-04-01T09:00:00Z",
+    "unloadingDateTime": "2024-04-01T14:57:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial San Juan",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "Cargando",
+      "Incidencia"
+    ],
+    "cmr": "Completado",
+    "transporter": "Transporte S.A."
+  },
+  {
+    "fileNumber": "344211",
+    "dispatchDate": "2024-04-09T00:00:00Z",
+    "documentNumber": "DOC-011",
+    "loadingDateTime": "2024-04-01T08:32:00Z",
+    "unloadingDateTime": "2024-04-01T13:56:00Z",
+    "sender": "Envases Express",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Miguel Lopez",
+    "status": [
+      "En tránsito"
+    ],
+    "cmr": "Borrador",
+    "transporter": "RapidCargo"
+  },
+  {
+    "fileNumber": "344212",
+    "dispatchDate": "2024-04-06T00:00:00Z",
+    "documentNumber": "DOC-012",
+    "loadingDateTime": "2024-04-01T06:35:00Z",
+    "unloadingDateTime": "2024-04-01T17:54:00Z",
+    "sender": "Envases Express",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Almacén Central",
+    "driver": "Miguel Lopez",
+    "status": [
+      "Entregado"
+    ],
+    "cmr": "Borrador",
+    "transporter": "Transportes Nacionales"
+  },
+  {
+    "fileNumber": "344213",
+    "dispatchDate": "2024-04-04T00:00:00Z",
+    "documentNumber": "DOC-013",
+    "loadingDateTime": "2024-04-01T10:03:00Z",
+    "unloadingDateTime": "2024-04-01T17:13:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Centro de Distribución",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "Pendiente"
+    ],
+    "cmr": "Borrador",
+    "transporter": "Transportes Nacionales"
+  },
+  {
+    "fileNumber": "344214",
+    "dispatchDate": "2024-04-08T00:00:00Z",
+    "documentNumber": "DOC-014",
+    "loadingDateTime": "2024-04-01T10:09:00Z",
+    "unloadingDateTime": "2024-04-01T13:47:00Z",
+    "sender": "Envases Express",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Ana García",
+    "status": [
+      "Cargando"
+    ],
+    "cmr": "Completado",
+    "transporter": "Logística Express"
+  },
+  {
+    "fileNumber": "344215",
+    "dispatchDate": "2024-04-05T00:00:00Z",
+    "documentNumber": "DOC-015",
+    "loadingDateTime": "2024-04-01T09:40:00Z",
+    "unloadingDateTime": "2024-04-01T13:59:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Almacén Central",
+    "driver": "Miguel Lopez",
+    "status": [
+      "En tránsito"
+    ],
+    "cmr": "Borrador",
+    "transporter": "Transportes Nacionales"
+  },
+  {
+    "fileNumber": "344216",
+    "dispatchDate": "2024-04-09T00:00:00Z",
+    "documentNumber": "DOC-016",
+    "loadingDateTime": "2024-04-01T07:46:00Z",
+    "unloadingDateTime": "2024-04-01T13:57:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Luis Pérez",
+    "status": [
+      "Entregado"
+    ],
+    "cmr": "Borrador",
+    "transporter": "Envios Plus"
+  },
+  {
+    "fileNumber": "344217",
+    "dispatchDate": "2024-04-04T00:00:00Z",
+    "documentNumber": "DOC-017",
+    "loadingDateTime": "2024-04-01T10:51:00Z",
+    "unloadingDateTime": "2024-04-01T15:19:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial Santa Fe",
+    "loadingPlace": "Almacén Central",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "Pendiente"
+    ],
+    "cmr": "Completado",
+    "transporter": "Transporte S.A."
+  },
+  {
+    "fileNumber": "344218",
+    "dispatchDate": "2024-04-05T00:00:00Z",
+    "documentNumber": "DOC-018",
+    "loadingDateTime": "2024-04-01T09:55:00Z",
+    "unloadingDateTime": "2024-04-01T18:36:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Almacén Central",
+    "driver": "Miguel Lopez",
+    "status": [
+      "Cargando",
+      "Incidencia"
+    ],
+    "cmr": "Borrador",
+    "transporter": "Logística Express"
+  },
+  {
+    "fileNumber": "344219",
+    "dispatchDate": "2024-04-11T00:00:00Z",
+    "documentNumber": "DOC-019",
+    "loadingDateTime": "2024-04-01T07:37:00Z",
+    "unloadingDateTime": "2024-04-01T14:48:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Centro de Distribución",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "En tránsito"
+    ],
+    "cmr": "Planificado",
+    "transporter": "RapidCargo"
+  },
+  {
+    "fileNumber": "344220",
+    "dispatchDate": "2024-04-02T00:00:00Z",
+    "documentNumber": "DOC-020",
+    "loadingDateTime": "2024-04-01T09:14:00Z",
+    "unloadingDateTime": "2024-04-01T18:41:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Centro de Distribución",
+    "driver": "Ana García",
+    "status": [
+      "Entregado"
+    ],
+    "cmr": "Completado",
+    "transporter": "Transporte S.A."
+  },
+  {
+    "fileNumber": "344221",
+    "dispatchDate": "2024-04-01T00:00:00Z",
+    "documentNumber": "DOC-021",
+    "loadingDateTime": "2024-04-01T09:25:00Z",
+    "unloadingDateTime": "2024-04-01T13:46:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial San Juan",
+    "loadingPlace": "Almacén Central",
+    "driver": "Miguel Lopez",
+    "status": [
+      "Pendiente"
+    ],
+    "cmr": "Planificado",
+    "transporter": "Envios Plus"
+  },
+  {
+    "fileNumber": "344222",
+    "dispatchDate": "2024-04-05T00:00:00Z",
+    "documentNumber": "DOC-022",
+    "loadingDateTime": "2024-04-01T06:56:00Z",
+    "unloadingDateTime": "2024-04-01T12:20:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial Santa Fe",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Luis Pérez",
+    "status": [
+      "Cargando"
+    ],
+    "cmr": "Completado",
+    "transporter": "Logística Express"
+  },
+  {
+    "fileNumber": "344223",
+    "dispatchDate": "2024-04-03T00:00:00Z",
+    "documentNumber": "DOC-023",
+    "loadingDateTime": "2024-04-01T09:51:00Z",
+    "unloadingDateTime": "2024-04-01T12:24:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "En tránsito"
+    ],
+    "cmr": "Borrador",
+    "transporter": "Transporte S.A."
+  },
+  {
+    "fileNumber": "344224",
+    "dispatchDate": "2024-04-01T00:00:00Z",
+    "documentNumber": "DOC-024",
+    "loadingDateTime": "2024-04-01T08:07:00Z",
+    "unloadingDateTime": "2024-04-01T13:41:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial San Juan",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Ana García",
+    "status": [
+      "Entregado"
+    ],
+    "cmr": "Completado",
+    "transporter": "Logística Express"
+  },
+  {
+    "fileNumber": "344225",
+    "dispatchDate": "2024-04-01T00:00:00Z",
+    "documentNumber": "DOC-025",
+    "loadingDateTime": "2024-04-01T09:58:00Z",
+    "unloadingDateTime": "2024-04-01T14:38:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Almacén Central",
+    "driver": "Ana García",
+    "status": [
+      "Pendiente",
+      "Incidencia"
+    ],
+    "cmr": "Planificado",
+    "transporter": "RapidCargo"
+  },
+  {
+    "fileNumber": "344226",
+    "dispatchDate": "2024-04-05T00:00:00Z",
+    "documentNumber": "DOC-026",
+    "loadingDateTime": "2024-04-01T07:03:00Z",
+    "unloadingDateTime": "2024-04-01T16:36:00Z",
+    "sender": "Envases Express",
+    "recipient": "Centro Comercial San Juan",
+    "loadingPlace": "Almacén Central",
+    "driver": "Luis Pérez",
+    "status": [
+      "Cargando"
+    ],
+    "cmr": "Incompleto",
+    "transporter": "Transportes Nacionales"
+  },
+  {
+    "fileNumber": "344227",
+    "dispatchDate": "2024-04-11T00:00:00Z",
+    "documentNumber": "DOC-027",
+    "loadingDateTime": "2024-04-01T06:28:00Z",
+    "unloadingDateTime": "2024-04-01T17:55:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial San Juan",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Luis Pérez",
+    "status": [
+      "En tránsito"
+    ],
+    "cmr": "Planificado",
+    "transporter": "Logística Express"
+  },
+  {
+    "fileNumber": "344228",
+    "dispatchDate": "2024-04-06T00:00:00Z",
+    "documentNumber": "DOC-028",
+    "loadingDateTime": "2024-04-01T09:38:00Z",
+    "unloadingDateTime": "2024-04-01T14:54:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Centro de Distribución",
+    "driver": "Luis Pérez",
+    "status": [
+      "Entregado"
+    ],
+    "cmr": "Planificado",
+    "transporter": "RapidCargo"
+  },
+  {
+    "fileNumber": "344229",
+    "dispatchDate": "2024-04-01T00:00:00Z",
+    "documentNumber": "DOC-029",
+    "loadingDateTime": "2024-04-01T10:52:00Z",
+    "unloadingDateTime": "2024-04-01T13:01:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial Santa Fe",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Luis Pérez",
+    "status": [
+      "Pendiente"
+    ],
+    "cmr": "Borrador",
+    "transporter": "Transporte S.A."
+  },
+  {
+    "fileNumber": "344230",
+    "dispatchDate": "2024-04-08T00:00:00Z",
+    "documentNumber": "DOC-030",
+    "loadingDateTime": "2024-04-01T08:01:00Z",
+    "unloadingDateTime": "2024-04-01T17:27:00Z",
+    "sender": "Envases Express",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Almacén Central",
+    "driver": "Jose Pociello",
+    "status": [
+      "Cargando"
+    ],
+    "cmr": "Planificado",
+    "transporter": "RapidCargo"
+  },
+  {
+    "fileNumber": "344231",
+    "dispatchDate": "2024-04-09T00:00:00Z",
+    "documentNumber": "DOC-031",
+    "loadingDateTime": "2024-04-01T07:20:00Z",
+    "unloadingDateTime": "2024-04-01T17:52:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial San Juan",
+    "loadingPlace": "Centro de Distribución",
+    "driver": "Jose Pociello",
+    "status": [
+      "En tránsito"
+    ],
+    "cmr": "Completado",
+    "transporter": "Logística Express"
+  },
+  {
+    "fileNumber": "344232",
+    "dispatchDate": "2024-04-10T00:00:00Z",
+    "documentNumber": "DOC-032",
+    "loadingDateTime": "2024-04-01T06:33:00Z",
+    "unloadingDateTime": "2024-04-01T18:58:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Ana García",
+    "status": [
+      "Entregado"
+    ],
+    "cmr": "Planificado",
+    "transporter": "Logística Express"
+  },
+  {
+    "fileNumber": "344233",
+    "dispatchDate": "2024-04-03T00:00:00Z",
+    "documentNumber": "DOC-033",
+    "loadingDateTime": "2024-04-01T09:14:00Z",
+    "unloadingDateTime": "2024-04-01T15:39:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial San Juan",
+    "loadingPlace": "Almacén Central",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "Pendiente",
+      "Incidencia"
+    ],
+    "cmr": "Planificado",
+    "transporter": "Envios Plus"
+  },
+  {
+    "fileNumber": "344234",
+    "dispatchDate": "2024-04-11T00:00:00Z",
+    "documentNumber": "DOC-034",
+    "loadingDateTime": "2024-04-01T09:02:00Z",
+    "unloadingDateTime": "2024-04-01T13:24:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Jose Pociello",
+    "status": [
+      "Cargando"
+    ],
+    "cmr": "Planificado",
+    "transporter": "Logística Express"
+  },
+  {
+    "fileNumber": "344235",
+    "dispatchDate": "2024-04-03T00:00:00Z",
+    "documentNumber": "DOC-035",
+    "loadingDateTime": "2024-04-01T10:34:00Z",
+    "unloadingDateTime": "2024-04-01T15:58:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Miguel Lopez",
+    "status": [
+      "En tránsito"
+    ],
+    "cmr": "Planificado",
+    "transporter": "Logística Express"
+  },
+  {
+    "fileNumber": "344236",
+    "dispatchDate": "2024-04-01T00:00:00Z",
+    "documentNumber": "DOC-036",
+    "loadingDateTime": "2024-04-01T09:38:00Z",
+    "unloadingDateTime": "2024-04-01T16:56:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial San Juan",
+    "loadingPlace": "Centro de Distribución",
+    "driver": "Ana García",
+    "status": [
+      "Entregado"
+    ],
+    "cmr": "Borrador",
+    "transporter": "Transportes Nacionales"
+  },
+  {
+    "fileNumber": "344237",
+    "dispatchDate": "2024-04-01T00:00:00Z",
+    "documentNumber": "DOC-037",
+    "loadingDateTime": "2024-04-01T08:44:00Z",
+    "unloadingDateTime": "2024-04-01T14:00:00Z",
+    "sender": "Envases Express",
+    "recipient": "Centro Comercial San Juan",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "Pendiente"
+    ],
+    "cmr": "Completado",
+    "transporter": "Envios Plus"
+  },
+  {
+    "fileNumber": "344238",
+    "dispatchDate": "2024-04-03T00:00:00Z",
+    "documentNumber": "DOC-038",
+    "loadingDateTime": "2024-04-01T07:32:00Z",
+    "unloadingDateTime": "2024-04-01T17:51:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Jose Pociello",
+    "status": [
+      "Cargando",
+      "Incidencia"
+    ],
+    "cmr": "Borrador",
+    "transporter": "RapidCargo"
+  },
+  {
+    "fileNumber": "344239",
+    "dispatchDate": "2024-04-02T00:00:00Z",
+    "documentNumber": "DOC-039",
+    "loadingDateTime": "2024-04-01T07:34:00Z",
+    "unloadingDateTime": "2024-04-01T13:06:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "En tránsito"
+    ],
+    "cmr": "Borrador",
+    "transporter": "Envios Plus"
+  },
+  {
+    "fileNumber": "344240",
+    "dispatchDate": "2024-04-05T00:00:00Z",
+    "documentNumber": "DOC-040",
+    "loadingDateTime": "2024-04-01T08:49:00Z",
+    "unloadingDateTime": "2024-04-01T18:00:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial San Juan",
+    "loadingPlace": "Centro de Distribución",
+    "driver": "Luis Pérez",
+    "status": [
+      "Entregado",
+      "Incidencia"
+    ],
+    "cmr": "Borrador",
+    "transporter": "Transportes Nacionales"
+  },
+  {
+    "fileNumber": "344241",
+    "dispatchDate": "2024-04-04T00:00:00Z",
+    "documentNumber": "DOC-041",
+    "loadingDateTime": "2024-04-01T10:28:00Z",
+    "unloadingDateTime": "2024-04-01T15:47:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Almacén Central",
+    "driver": "Luis Pérez",
+    "status": [
+      "Pendiente"
+    ],
+    "cmr": "Completado",
+    "transporter": "RapidCargo"
+  },
+  {
+    "fileNumber": "344242",
+    "dispatchDate": "2024-04-06T00:00:00Z",
+    "documentNumber": "DOC-042",
+    "loadingDateTime": "2024-04-01T07:56:00Z",
+    "unloadingDateTime": "2024-04-01T13:07:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Centro de Distribución",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "Cargando"
+    ],
+    "cmr": "Planificado",
+    "transporter": "Transportes Nacionales"
+  },
+  {
+    "fileNumber": "344243",
+    "dispatchDate": "2024-04-06T00:00:00Z",
+    "documentNumber": "DOC-043",
+    "loadingDateTime": "2024-04-01T08:16:00Z",
+    "unloadingDateTime": "2024-04-01T17:33:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Almacén Central",
+    "driver": "Luis Pérez",
+    "status": [
+      "En tránsito"
+    ],
+    "cmr": "Completado",
+    "transporter": "Transportes Nacionales"
+  },
+  {
+    "fileNumber": "344244",
+    "dispatchDate": "2024-04-07T00:00:00Z",
+    "documentNumber": "DOC-044",
+    "loadingDateTime": "2024-04-01T10:41:00Z",
+    "unloadingDateTime": "2024-04-01T14:04:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial Santa Fe",
+    "loadingPlace": "Centro de Distribución",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "Entregado"
+    ],
+    "cmr": "Completado",
+    "transporter": "Logística Express"
+  },
+  {
+    "fileNumber": "344245",
+    "dispatchDate": "2024-04-09T00:00:00Z",
+    "documentNumber": "DOC-045",
+    "loadingDateTime": "2024-04-01T07:46:00Z",
+    "unloadingDateTime": "2024-04-01T12:47:00Z",
+    "sender": "Envases Express",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Centro de Distribución",
+    "driver": "Luis Pérez",
+    "status": [
+      "Pendiente"
+    ],
+    "cmr": "Completado",
+    "transporter": "Transporte S.A."
+  },
+  {
+    "fileNumber": "344246",
+    "dispatchDate": "2024-04-04T00:00:00Z",
+    "documentNumber": "DOC-046",
+    "loadingDateTime": "2024-04-01T10:09:00Z",
+    "unloadingDateTime": "2024-04-01T14:33:00Z",
+    "sender": "Envases Express",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "Cargando"
+    ],
+    "cmr": "Borrador",
+    "transporter": "RapidCargo"
+  },
+  {
+    "fileNumber": "344247",
+    "dispatchDate": "2024-04-08T00:00:00Z",
+    "documentNumber": "DOC-047",
+    "loadingDateTime": "2024-04-01T07:22:00Z",
+    "unloadingDateTime": "2024-04-01T12:02:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Almacén Central",
+    "driver": "Ana García",
+    "status": [
+      "En tránsito",
+      "Incidencia"
+    ],
+    "cmr": "Planificado",
+    "transporter": "Logística Express"
+  },
+  {
+    "fileNumber": "344248",
+    "dispatchDate": "2024-04-07T00:00:00Z",
+    "documentNumber": "DOC-048",
+    "loadingDateTime": "2024-04-01T10:20:00Z",
+    "unloadingDateTime": "2024-04-01T14:27:00Z",
+    "sender": "Envases Express",
+    "recipient": "Centro Comercial Santa Fe",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "Entregado"
+    ],
+    "cmr": "Planificado",
+    "transporter": "Envios Plus"
+  },
+  {
+    "fileNumber": "344249",
+    "dispatchDate": "2024-04-04T00:00:00Z",
+    "documentNumber": "DOC-049",
+    "loadingDateTime": "2024-04-01T06:34:00Z",
+    "unloadingDateTime": "2024-04-01T17:23:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Ana García",
+    "status": [
+      "Pendiente"
+    ],
+    "cmr": "Completado",
+    "transporter": "Transporte S.A."
+  },
+  {
+    "fileNumber": "344250",
+    "dispatchDate": "2024-04-10T00:00:00Z",
+    "documentNumber": "DOC-050",
+    "loadingDateTime": "2024-04-01T09:47:00Z",
+    "unloadingDateTime": "2024-04-01T12:20:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial San Juan",
+    "loadingPlace": "Centro de Distribución",
+    "driver": "Miguel Lopez",
+    "status": [
+      "Cargando",
+      "Incidencia"
+    ],
+    "cmr": "Completado",
+    "transporter": "Logística Express"
+  },
+  {
+    "fileNumber": "344251",
+    "dispatchDate": "2024-04-07T00:00:00Z",
+    "documentNumber": "DOC-051",
+    "loadingDateTime": "2024-04-01T06:56:00Z",
+    "unloadingDateTime": "2024-04-01T14:41:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Almacén Central",
+    "driver": "Luis Pérez",
+    "status": [
+      "En tránsito"
+    ],
+    "cmr": "Borrador",
+    "transporter": "Envios Plus"
+  },
+  {
+    "fileNumber": "344252",
+    "dispatchDate": "2024-04-05T00:00:00Z",
+    "documentNumber": "DOC-052",
+    "loadingDateTime": "2024-04-01T06:39:00Z",
+    "unloadingDateTime": "2024-04-01T15:12:00Z",
+    "sender": "Envases Express",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Jose Pociello",
+    "status": [
+      "Entregado"
+    ],
+    "cmr": "Incompleto",
+    "transporter": "Logística Express"
+  },
+  {
+    "fileNumber": "344253",
+    "dispatchDate": "2024-04-09T00:00:00Z",
+    "documentNumber": "DOC-053",
+    "loadingDateTime": "2024-04-01T06:00:00Z",
+    "unloadingDateTime": "2024-04-01T15:27:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Almacén Central",
+    "driver": "Ana García",
+    "status": [
+      "Pendiente"
+    ],
+    "cmr": "Completado",
+    "transporter": "Logística Express"
+  },
+  {
+    "fileNumber": "344254",
+    "dispatchDate": "2024-04-04T00:00:00Z",
+    "documentNumber": "DOC-054",
+    "loadingDateTime": "2024-04-01T07:55:00Z",
+    "unloadingDateTime": "2024-04-01T16:09:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial San Juan",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Ana García",
+    "status": [
+      "Cargando"
+    ],
+    "cmr": "Borrador",
+    "transporter": "Transportes Nacionales"
+  },
+  {
+    "fileNumber": "344255",
+    "dispatchDate": "2024-04-03T00:00:00Z",
+    "documentNumber": "DOC-055",
+    "loadingDateTime": "2024-04-01T08:57:00Z",
+    "unloadingDateTime": "2024-04-01T14:55:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial del Sur",
+    "loadingPlace": "Centro de Distribución",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "En tránsito"
+    ],
+    "cmr": "Planificado",
+    "transporter": "Logística Express"
+  },
+  {
+    "fileNumber": "344256",
+    "dispatchDate": "2024-04-01T00:00:00Z",
+    "documentNumber": "DOC-056",
+    "loadingDateTime": "2024-04-01T09:17:00Z",
+    "unloadingDateTime": "2024-04-01T12:17:00Z",
+    "sender": "Envases Express",
+    "recipient": "Centro Comercial Las Flores",
+    "loadingPlace": "Almacén Central",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "Entregado"
+    ],
+    "cmr": "Planificado",
+    "transporter": "Envios Plus"
+  },
+  {
+    "fileNumber": "344257",
+    "dispatchDate": "2024-04-09T00:00:00Z",
+    "documentNumber": "DOC-057",
+    "loadingDateTime": "2024-04-01T08:45:00Z",
+    "unloadingDateTime": "2024-04-01T14:36:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial Santa Fe",
+    "loadingPlace": "Centro de Distribución",
+    "driver": "Carlos Ruiz",
+    "status": [
+      "Pendiente"
+    ],
+    "cmr": "Completado",
+    "transporter": "Envios Plus"
+  },
+  {
+    "fileNumber": "344258",
+    "dispatchDate": "2024-04-10T00:00:00Z",
+    "documentNumber": "DOC-058",
+    "loadingDateTime": "2024-04-01T08:05:00Z",
+    "unloadingDateTime": "2024-04-01T15:14:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial Santa Fe",
+    "loadingPlace": "Almacén Central",
+    "driver": "Miguel Lopez",
+    "status": [
+      "Cargando",
+      "Incidencia"
+    ],
+    "cmr": "Planificado",
+    "transporter": "Envios Plus"
+  },
+  {
+    "fileNumber": "344259",
+    "dispatchDate": "2024-04-09T00:00:00Z",
+    "documentNumber": "DOC-059",
+    "loadingDateTime": "2024-04-01T10:13:00Z",
+    "unloadingDateTime": "2024-04-01T15:52:00Z",
+    "sender": "Fabrica de Papel",
+    "recipient": "Centro Comercial Santa Fe",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Ana García",
+    "status": [
+      "En tránsito"
+    ],
+    "cmr": "Borrador",
+    "transporter": "RapidCargo"
+  },
+  {
+    "fileNumber": "344260",
+    "dispatchDate": "2024-04-06T00:00:00Z",
+    "documentNumber": "DOC-060",
+    "loadingDateTime": "2024-04-01T10:20:00Z",
+    "unloadingDateTime": "2024-04-01T16:10:00Z",
+    "sender": "Distribuidora Global",
+    "recipient": "Centro Comercial Santa Fe",
+    "loadingPlace": "Planta de Producción",
+    "driver": "Ana García",
+    "status": [
+      "Entregado"
+    ],
+    "cmr": "Borrador",
+    "transporter": "RapidCargo"
+  }
+]
