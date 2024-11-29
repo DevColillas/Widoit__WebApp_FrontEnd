@@ -1,7 +1,7 @@
 <div class="dashboard-container">
   <h1 class="title-dashboard">Lista de pedidos</h1>
   <div>
-    <app-dynamic-button-group [statuses]="statusesSignal()" [selectedDocumentNumber]="documentNumberSignal()" ></app-dynamic-button-group>
+    <app-dynamic-button-group [isDashboard]="isDashboard" [statuses]="statusesSignal()" [selectedDocumentNumber]="documentNumberSignal()" ></app-dynamic-button-group>
   </div>
   <div>
     <!-- todo: el botón abrirá un modal, y luego se redirigirá a la pantalla de shipment a través del id generado después de completar formulario de modal  -->

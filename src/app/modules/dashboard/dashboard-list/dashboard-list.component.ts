@@ -261,7 +261,6 @@ export class DashboardListComponent implements OnInit {
   applyFilters(filtroData?: any) {
     // Define la lógica para aplicar los filtros aquí
     this.filtersSaved = filtroData
-    console.log(filtroData);
 
     if (!filtroData) return;
 

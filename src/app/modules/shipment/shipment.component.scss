@@ -20,3 +20,83 @@
   padding: 0px 10px;
 
 }
+
+
+
+
+//chip
+
+.card{
+  position: relative;
+}
+.custom-ptabview{
+  width: 100%;
+}
+.tab-header-extra {
+  position: absolute;  /* Lo posicionamos de manera absoluta respecto al contenedor */
+  top: 0;              /* Pegado al top del contenedor */
+  right: 0;            /* Pegado al lado derecho */
+  z-index: 10;         /* Asegura que el chip esté por encima del contenido */
+  display: none;       /* Por defecto no lo mostramos en pantallas pequeñas */
+}
+
+::ng-deep .p-chip-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16.94px;
+  margin: 0px;
+}
+
+::ng-deep .chip-planificado {
+  max-height: 22px;
+  border-radius: 16px;
+  border: 1px solid var(--button-outlined-active-background, rgba(59, 130, 246, 0.16));
+  background: var(--button-outlined-hover-background, rgba(59, 130, 246, 0.04));
+
+  .p-chip-text {
+    color: var(--button-background, #3B82F6);
+  }
+
+}
+
+::ng-deep .chip-borrador {
+  max-height: 22px;
+  border-radius: 16px;
+  border: 1px solid var(--button-help-outlined-active-background, rgba(168, 85, 247, 0.16));
+  background: var(--button-help-outlined-hover-background, rgba(168, 85, 247, 0.04));
+
+  .p-chip-text {
+    color: var(--button-help-background, #A855F7);
+  }
+}
+
+::ng-deep .chip-completado {
+  max-height: 22px;
+  border-radius: 16px;
+  border: 1px solid var(--button-success-outlined-active-background, rgba(34, 197, 94, 0.16));
+  background: var(--button-success-outlined-hover-background, rgba(34, 197, 94, 0.04));
+
+  .p-chip-text {
+    color: var(--button-success-background, #22C55E);
+  }
+}
+
+::ng-deep .chip-incompleto {
+  max-height: 22px;
+  border-radius: 16px;
+  border: 1px solid var(--skeleton-background, #F59E0B29);
+  background: var(--skeleton-animation-background, rgba(245, 158, 11, 0.039));
+
+  .p-chip-text {
+    color: var(--global-textSecondaryColor, #F97316);
+
+  }
+}
+
+/* Media Query para pantallas pequeñas (menos de 768px de ancho) */
+@media (max-width: 768px) {
+  .tab-header-extra {
+    display: none; /* Esconde el chip en pantallas pequeñas */
+  }
+}

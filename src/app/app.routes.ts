@@ -19,10 +19,6 @@ export const routes: Routes = [
         loadComponent: () => import('./modules/profile/profile.component').then((m) => m.ProfileComponent),
       },
       {
-        path: '400',
-        loadComponent: () => import('./layout/errors/error400/error400.component').then((m) => m.Error400Component),
-      },
-      {
         path: '404',
         loadComponent: () => import('./layout/errors/error404/error404.component').then((m) => m.Error404Component),
       },

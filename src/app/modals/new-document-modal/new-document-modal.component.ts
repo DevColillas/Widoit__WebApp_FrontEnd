@@ -47,7 +47,7 @@ export class NewDocumentModalComponent implements OnInit {
 
   public newDocumentForm: FormGroup = this.fb.group({
     identifiers: this.fb.group({
-      documentNumber: [{ value: 'DOC-123', disabled: true }, Validators.required], //todo: validator custom para que si o si tenga el formato que queremos.
+      documentNumber: [{ value: 'DOC-001', disabled: true }, Validators.required], //todo: validator custom para que si o si tenga el formato que queremos.
       fileNumber: ['123456789'], //todo: Es opcional. Pero si hay algun valor, tiene que tener el formato que queremos.
       internalMarker: ['12345'], //todo: Es opcional. Pero si hay algun valor, tiene que tener el formato que queremos.
     }),
@@ -103,7 +103,7 @@ export class NewDocumentModalComponent implements OnInit {
 
       // Redirección a la ruta deseada
       this.closeModal();
-      this.navigateToShipment('344201'); //todo: enviar el documentNumber o el dato que queramos único para poder cargar los datos en la siguiente página
+      this.navigateToShipment(formData.identifiers.documentNumber); //todo: enviar el documentNumber o el dato que queramos único para poder cargar los datos en la siguiente página
     } else {
       // Si el formulario no es válido, mostrar alerta con los errores
       const errors = this.getFormValidationErrors();

@@ -5,11 +5,13 @@ import { Shipment } from '../models/data-dashboar.model';
 import { environment } from '../../environments/environment.prod';
 import { ShipmentAnnexes } from '../models/shipment-annexes';
 import { Router } from '@angular/router';
+import { response } from 'express';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShipmentService {
+
   // "any" at the moment. Will implement type when overall structure of app is clear
   private readonly http = inject(HttpClient);
   private readonly router = inject(Router);
@@ -34,9 +36,6 @@ export class ShipmentService {
       },
       error: (error) => {
         switch (error.status) {
-          case 400:
-            this.router.navigate(['/400']);
-            break;
           case 404:
             this.router.navigate(['/404']);
             break;
@@ -84,7 +83,6 @@ export class ShipmentService {
 
   submitDriverForm() {
     console.log('Driver form submitted');
-    console.log(this.driverFormData);
   }
 
 
@@ -121,12 +119,18 @@ export class ShipmentService {
     throw new Error('Method not implemented.');
   }
 
+  changeCrmStatusToPlanned() {
+    throw new Error('Method not implemented.');
+  }
+  saveChanges() {
+    throw new Error('Method not implemented.');
+  }
+
   submitShipmentForm() {
     // console.log('Route form submitted');
     // console.log(this._routeFormData);
 
     console.log('products form submitted');
-    console.log(this._productsFormData);
   }
 
   getShipmentAttachments(): Observable<ShipmentAnnexes[]> {

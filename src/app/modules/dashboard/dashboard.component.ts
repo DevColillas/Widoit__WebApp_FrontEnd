@@ -21,7 +21,7 @@ import { NewDocumentModalComponent } from '../../modals/new-document-modal/new-d
 export class DashboardComponent {
 
   private readonly router = inject(Router)
-
+  public isDashboard: boolean = true;
   // Signal para el estado del status
   public statusesSignal = signal<string[]>([]);
 

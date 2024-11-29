@@ -1,19 +1,15 @@
 <!-- bradcrumb and dynamic buttons-->
 <div class="shipment-header ">
   <div>
-    <app-breadcrumb [documentNumber]="documentNumber"></app-breadcrumb>
+    <app-breadcrumb [documentNumber]="documentNumber()"></app-breadcrumb>
   </div>
-  <div class="button-group">
-    <p-button (onClick)="shipmentService.submitDriverForm()" label="Guardar" [text]="true" icon="pi pi-save"
-      size="small"></p-button>
-    <p-button label="Cancelar" [text]="true" icon="pi pi-times-circle" size="small"></p-button>
-    <p-button label="Planificar" [text]="true" icon="pi pi-check-circle" size="small"></p-button>
-    <p-button label="Eliminar" [text]="true" icon="pi pi-trash" size="small"></p-button>
+  <div>
+    <app-dynamic-button-group [isDashboard]="isDashboard" [statuses]="shipmentCrmStatus()" [selectedDocumentNumber]="documentNumber()" ></app-dynamic-button-group>
   </div>
 </div>
 <!-- tabs and lazy load contents -->
 <div class="card">
-  <p-tabView [activeIndex]="activeShipmentIndex" (tabChange)="onTabChange($event)">
+  <p-tabView [activeIndex]="activeShipmentIndex" (tabChange)="onTabChange($event)" styleClass="custom-tabview">
     <p-tabPanel>
       <ng-template pTemplate="header">
         <div class="flex align-items-center gap-2">
@@ -127,4 +123,8 @@
     </p-tabPanel>
 
   </p-tabView>
+  <!-- Aquí insertamos el chip a la derecha del contenedor de los tabs -->
+  <div class="tab-header-extra display-none md:flex">
+    <p-chip label="Borrador" class="ml-3" [label]="shipmentCrmStatus()[0]" [styleClass]="getCmrChipClass(shipmentCrmStatus()[0])"></p-chip>
+  </div>
 </div>

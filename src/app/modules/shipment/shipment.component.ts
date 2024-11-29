@@ -1,5 +1,5 @@
 import { CommonModule, isPlatformBrowser } from "@angular/common";
-import { Component, inject } from "@angular/core";
+import { Component, inject, signal } from "@angular/core";
 import { ButtonModule } from "primeng/button";
 import { TabViewModule } from "primeng/tabview";
 import { ActivatedRoute, Router } from "@angular/router";
@@ -13,6 +13,8 @@ import { ProductShipmentComponent } from "./product-shipment/product-shipment.co
 import { RoutesShipmentComponent } from "./routes-shipment/routes-shipment.component";
 import { BreadcrumbComponent } from "../../shared/components/breadcrumb/breadcrumb.component";
 import { WindowRefService } from "../../services/window-ref.service";
+import { DynamicButtonGroupComponent } from "../../shared/components/dynamic-button-group/dynamic-button-group.component";
+import { ChipModule } from "primeng/chip";
 
 @Component({
   selector: 'app-shipment',
@@ -21,6 +23,7 @@ import { WindowRefService } from "../../services/window-ref.service";
     CommonModule,
     TabViewModule,
     ButtonModule,
+    ChipModule,
     AnnexesShipmentComponent,
     DocumentShipmentComponent,
     DriverShipmentComponent,
@@ -28,7 +31,8 @@ import { WindowRefService } from "../../services/window-ref.service";
     IncidenceShipmentComponent,
     ProductShipmentComponent,
     RoutesShipmentComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    DynamicButtonGroupComponent,
   ],
   templateUrl: './shipment.component.html',
   styleUrl: './shipment.component.scss'
@@ -37,16 +41,21 @@ export class ShipmentComponent {
   private readonly activatedRoute = inject(ActivatedRoute);
   private readonly router = inject(Router);
   private readonly windowRefService = inject(WindowRefService);
-  public documentNumber: string = '';
+
+  public documentNumber = signal<string>('');
   public shipmentService = inject(ShipmentService);
   public activeShipmentIndex: number = 0;
-  public shipmentCrmStatus: string = '';
+  public shipmentCrmStatus = signal<string[]>([]);
+
+  //dynamic buttons
+  // Signal para el estado del status
+  public isDashboard: boolean = false;
 
 
   constructor() {
-    this.documentNumber = this.activatedRoute.snapshot.paramMap.get('documentNumber')!;
-    this.shipmentCrmStatus = this.shipmentService.getShipmentCrmStatus(this.documentNumber);
-    console.log(this.shipmentCrmStatus);
+    this.documentNumber.set(this.activatedRoute.snapshot.paramMap.get('documentNumber')!);
+    this.shipmentService.getShipmentData();
+    this.shipmentCrmStatus.set([this.shipmentService.getShipmentCrmStatus(this.documentNumber())]);
   }
 
 
@@ -77,5 +86,22 @@ export class ShipmentComponent {
   // Método para manejar el cambio de tab manualmente
   onTabChange(event: any) {
     this.activeShipmentIndex = event.index;
+  }
+
+  //chip styles
+  //custom chips class
+  public getCmrChipClass(cmr: string): string {
+    switch (cmr) {
+      case 'Planificado':
+        return 'chip-planificado'; // Clase CSS para "Planificado"
+      case 'Borrador':
+        return 'chip-borrador';     // Clase CSS para "Borrador"
+      case 'Completado':
+        return 'chip-completado'; // Clase CSS para "Completado
+      case 'Incompleto':
+        return 'chip-incompleto';
+      default:
+        return 'chip-default';      // Clase CSS predeterminada
+    }
   }
 }
