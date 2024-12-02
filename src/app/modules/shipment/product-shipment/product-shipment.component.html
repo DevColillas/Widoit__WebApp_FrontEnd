@@ -12,14 +12,12 @@
             <!-- Naturaleza -->
             <div class="field col-12 lg:col-3 flex flex-column dropdown-content">
               <label class="form-label font-bold" for="nature-{{ i }}">Naturaleza*</label>
-              <p-dropdown
-                id="nature-{{ i }}"
-                [options]="nature"
-                onChange="changeNatureProduct($event, i)"
+              <input
+                formControlName="nature"
                 class="w-full"
-                appendTo="body"
-                optionLabel="name"
-                placeholder="Selecciona naturaleza"
+                id="nature-{{ i }}"
+                type="text"
+                pInputText
               />
             </div>
 

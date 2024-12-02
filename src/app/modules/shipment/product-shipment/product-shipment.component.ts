@@ -9,7 +9,6 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ShipmentFormSectionComponent } from '../../../shared/components/shipment-form-section/shipment-form-section.component';
-import { DropdownModule } from 'primeng/dropdown';
 import { Nature } from '../../../models/nature.model';
 
 
@@ -24,7 +23,6 @@ import { Nature } from '../../../models/nature.model';
     InputGroupModule,
     InputNumberModule,
     InputTextareaModule,
-    DropdownModule,
     FormsModule,
     ShipmentFormSectionComponent,
   ],
@@ -60,16 +58,7 @@ export class ProductShipmentComponent {
   }
 
   ngOnInit(): void {
-    this.nature = [
-      { name: 'Textil', code: 'tex' },
-      { name: 'Liquido', code: 'liq' },
-      { name: 'Perecedera', code: 'pere' },
-      { name: 'No perecedera', code: 'noPere' },
-      { name: 'Fragil', code: 'fra' },
-      { name: 'Peligrosa', code: 'peli' },
-      { name: 'Animales vivos', code: 'animalesVivos' }
-    ];
-    this.selectedNature = new Array(5).fill(null);
+    
   }
 
   // Derived signals
@@ -88,7 +77,7 @@ export class ProductShipmentComponent {
 
   createProductGroup(): FormGroup {
     return this.fb.group({
-      nature: ['Textil', Validators.required],
+      nature: ['Tangibles', Validators.required],
       name: ['Bobina de Papel', Validators.required],
       quantity: [1, [Validators.required, Validators.min(1)]],
       volume: [0, [Validators.required, Validators.min(0)]],
